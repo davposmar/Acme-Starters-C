@@ -39,10 +39,5 @@
 			<type>2</type>
 			<locationURI>WORKSPACE_LOC/Frameworks/Acme-Framework-26.1.0/target/classes</locationURI>
 		</link>
-		<link>
-			<name>target/classes</name>
-			<type>2</type>
-			<location>//C:/Users/jaime/Desktop/Universidad/3º/Segundo_Cuatri/DP2/Workspace-26/Starters/Hello-World-26.1.0/target/classes/</location>
-		</link>
 	</linkedResources>
 </projectDescription>
