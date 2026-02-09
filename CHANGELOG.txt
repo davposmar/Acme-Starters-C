@@ -8,4 +8,4 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-26.1.0 This is the first version of Acme Starters C
+C This is the version of the first deliverable of Acme Starters

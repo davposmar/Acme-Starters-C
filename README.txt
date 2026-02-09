@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-This is project Acme Starters C. It's intended to illustrate how the "Hello-World"
+This is project Acme Starters. It's intended to illustrate how the "Hello-World"
 starter can be instantiated.
 
 To get this project up and running, please follow the guideline in the theory/lab 
@@ -17,6 +17,6 @@ the Acme-Framework excluding the following resources:
 
 - **/fragments/**
  
-Acme Starters C, Inc. is a fictitious company that specialises in helping entrepreneurs 
+Acme Starters, Inc. is a fictitious company that specialises in helping entrepreneurs 
 publicise their ideas. The goal of this project is to develop a web information system 
 that helps this company manage their business.
