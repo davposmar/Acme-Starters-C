@@ -1,5 +1,5 @@
 
-package acme.entities.milestones;
+package acme.entities.campaigns;
 
 public enum MilestoneKind {
 	TEASER, ENGAGING, CONVERSION
