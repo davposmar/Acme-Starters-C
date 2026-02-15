@@ -1,0 +1,101 @@
+
+package acme.entities.campaigns;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+import javax.validation.Valid;
+
+import acme.client.components.basis.AbstractEntity;
+import acme.client.components.datatypes.Moment;
+import acme.client.components.validation.Mandatory;
+import acme.client.components.validation.Optional;
+import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidMoment.Constraint;
+import acme.client.components.validation.ValidUrl;
+import acme.realms.Spokesperson;
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+public class Campaign extends AbstractEntity {
+
+	// Serialisation version -----------------------------------------
+
+	private static final long	serialVersionUID	= 1L;
+
+	// Attributes ----------------------------------------------------
+
+	@Mandatory
+	//    @ValidTicker
+	@Column(unique = true)
+	private String				ticker;
+
+	@Mandatory
+	//    @ValidHeader
+	@Column
+	private String				name;
+
+	@Mandatory
+	//    @ValidText
+	@Column
+	private String				description;
+
+	@Mandatory
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Moment				startMoment;
+
+	@Mandatory
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Moment				endMoment;
+
+	@Optional
+	@ValidUrl
+	@Column
+	private String				moreInfo;
+
+	@Mandatory
+	//	@Valid
+	@Column
+	private boolean				draftMode;
+
+	// Derived attributes --------------------------------------------
+
+
+	@Transient
+	//	@Mandatory
+	@Valid
+	public Double getMonthsActive() {
+		if (this.startMoment == null || this.endMoment == null)
+			return 0.0;
+
+		long diff = this.endMoment.getTime() - this.startMoment.getTime();
+		return diff / (1000.0 * 60 * 60 * 24 * 30); // Uso 30 dias ???
+	}
+
+	@Transient
+	//	@Mandatory
+	//	@ValidNumber(min = 0)
+	public Double getEffort() {
+		double total = 0.0;
+		// Aquí sumo el esfuerzo de los Milestones que pertenezcan a esta Campaign
+		// for(Milestone m : this.milestones) { total += m.getEffort(); }
+		return total;
+	}
+
+	// Relationships -------------------------------------------------
+
+
+	@Mandatory
+	@Valid
+	@ManyToOne
+	private Spokesperson spokesperson;
+
+}
