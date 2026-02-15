@@ -1,17 +1,21 @@
 
 package acme.entities.campaigns;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
+import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.realms.Spokesperson;
 import lombok.Getter;
@@ -44,14 +48,14 @@ public class Campaign extends AbstractEntity {
 	private String				description;
 
 	@Mandatory
-	//	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
-	//	@Temporal(TemporalType.TIMESTAMP)
-	private LocalDateTime		startMoment;
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				startMoment;
 
 	@Mandatory
-	//	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
-	//	@Temporal(TemporalType.TIMESTAMP)
-	private LocalDateTime		endMoment;
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				endMoment;
 
 	@Optional
 	@ValidUrl
@@ -65,17 +69,17 @@ public class Campaign extends AbstractEntity {
 
 	// Derived attributes --------------------------------------------
 
-	//	@Transient
-	//	//	@Mandatory
-	//	@Valid
-	//	public Double getMonthsActive() {
-	//		if (this.startMoment == null || this.endMoment == null)
-	//			return 0.0;
-	//
-	//		long diff = this.endMoment.getTime() - this.startMoment.getTime();
-	//		return diff / (1000.0 * 60 * 60 * 24 * 30); // Uso 30 dias ???
-	//	}
 
+	@Transient
+	//	@Mandatory
+	@Valid
+	public Double getMonthsActive() {
+		if (this.startMoment == null || this.endMoment == null)
+			return 0.0;
+
+		long diff = this.endMoment.getTime() - this.startMoment.getTime();
+		return diff / (1000.0 * 60 * 60 * 24 * 30); // Uso 30 dias ???
+	}
 
 	@Transient
 	//	@Mandatory
