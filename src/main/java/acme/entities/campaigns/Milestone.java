@@ -49,7 +49,7 @@ public class Milestone extends AbstractEntity {
 
 	@Mandatory
 	@Valid
-	@ManyToOne
+	@ManyToOne(optional = false)
 	private Campaign			campaign;
 
 }

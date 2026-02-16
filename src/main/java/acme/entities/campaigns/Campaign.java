@@ -63,9 +63,9 @@ public class Campaign extends AbstractEntity {
 	private String				moreInfo;
 
 	@Mandatory
-	//	@Valid
+	@Valid
 	@Column
-	private boolean				draftMode;
+	private Boolean				draftMode;
 
 	// Derived attributes --------------------------------------------
 
@@ -96,7 +96,7 @@ public class Campaign extends AbstractEntity {
 
 	@Mandatory
 	@Valid
-	@ManyToOne
+	@ManyToOne(optional = false)
 	private Spokesperson spokesperson;
 
 }
