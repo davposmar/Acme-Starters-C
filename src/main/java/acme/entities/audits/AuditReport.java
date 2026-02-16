@@ -91,6 +91,6 @@ public class AuditReport extends AbstractEntity {
 
 	@Mandatory
 	@Valid
-	@ManyToOne
+	@ManyToOne(optional = false)
 	private Auditor auditor;
 }
