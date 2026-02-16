@@ -11,12 +11,16 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import acme.client.components.basis.AbstractEntity;
+import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
+import acme.features.donation.DonationRepository;
 import acme.realms.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
@@ -69,19 +73,26 @@ public class Sponsorship extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
-
-	//@Mandatory
-	@Valid
 	@Transient
-	public Double monthsActive() {
-		return (double) ((this.endMoment.getTime() - this.starMoment.getTime()) / (1000 * 60 * 60 * 24 * 30));
+	@Autowired
+	private DonationRepository	donationRepository;
+
+
+	@Transient
+	public Double getMonthsActive() {
+		if (this.getStarMoment() == null || this.getEndMoment() == null)
+			return 0.0;
+		return (double) ((this.getEndMoment().getTime() - this.getStarMoment().getTime()) / (1000 * 60 * 60 * 24 * 30));
 	}
 
-	//@Mandatory
-	//@ValidMoney(min=0)
 	@Transient
-	public Double totalMoney() {
-		return null;
+	public Money getTotalMoney() {
+		Money totalMoney = new Money();
+		Double sum = this.donationRepository.calcTotalMoneySponsorship(this.getId());
+		sum = sum == null ? 0.0 : sum;
+		totalMoney.setAmount(sum);
+		totalMoney.setCurrency("EUR");
+		return totalMoney;
 	}
 
 	// Relationships ----------------------------------------------------------
@@ -89,7 +100,7 @@ public class Sponsorship extends AbstractEntity {
 
 	@Mandatory
 	@Valid
-	@ManyToOne
+	@ManyToOne(optional = false)
 	private Sponsor sponsor;
 
 }
