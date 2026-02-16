@@ -1,33 +1,33 @@
 
 package acme.realms;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.Valid;
 
-import acme.entities.fundraising.Strategy;
+import acme.client.components.basis.AbstractRole;
+import acme.client.components.validation.Mandatory;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-public class Fundraiser {
+@Getter
+@Setter
+public class Fundraiser extends AbstractRole {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long						id;
+	@Mandatory
+	// TODO: @ValidHeader
+	@Column
+	private String	bank;
 
-	@NotBlank
-	private String						bank;
+	@Mandatory
+	// TODO: @ValidText
+	@Column
+	private String	statement;
 
-	@NotBlank
-	private String						statement;
-
-	@NotNull
-	private Boolean						agent;
-
-	@OneToMany
-	private java.util.List<Strategy>	strategies;
+	@Mandatory
+	@Valid
+	@Column
+	private Boolean	agent;
 
 }

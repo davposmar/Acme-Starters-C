@@ -2,25 +2,22 @@
 package acme.entities.fundraising;
 
 import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.Valid;
 
-import org.hibernate.validator.constraints.URL;
-
+import acme.client.components.basis.AbstractEntity;
+import acme.client.components.validation.Mandatory;
+import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidMoment.Constraint;
+import acme.client.components.validation.ValidUrl;
 import acme.realms.Fundraiser;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,41 +25,46 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Strategy {
+public class Strategy extends AbstractEntity {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long			id;
+	private static final long	serialVersionUID	= 1L;
 
-	@NotBlank
-	private String			ticker;
+	@Mandatory
+	// TODO: @ValidTicker
+	@Column(unique = true)
+	private String				ticker;
 
-	@NotBlank
-	private String			name;
+	@Mandatory
+	// TODO: @ValidHeader
+	@Column(unique = true)
+	private String				name;
 
-	@NotBlank
-	private String			description;
+	@Mandatory
+	// TODO: @ValidText
+	private String				description;
 
-	@NotNull
+	@Mandatory
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date			startMoment;
+	private Date				startMoment;
 
-	@NotNull
+	@Mandatory
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date			endMoment;
+	private Date				endMoment;
 
-	@URL
-	private String			moreInfo;
+	@ValidUrl
+	@Column
+	private String				moreInfo;
 
-	@NotNull
-	private Boolean			draftMode;
+	@Mandatory
+	@Valid
+	@Column
+	private Boolean				draftMode;
 
 	@ManyToOne
 	@JoinColumn(name = "fundraiser_id")
-	private Fundraiser		fundraiser;
-
-	@OneToMany
-	private List<Tactic>	tactics	= new ArrayList<>();
+	private Fundraiser			fundraiser;
 
 
 	@Transient
@@ -72,13 +74,6 @@ public class Strategy {
 		long days = ChronoUnit.DAYS.between(this.startMoment.toInstant(), this.endMoment.toInstant());
 		double months = days / 30.436875;
 		return Math.round(months * 10.0) / 10.0;
-	}
-
-	@Transient
-	public Double getExpectedPercentage() {
-		if (this.tactics == null || this.tactics.isEmpty())
-			return 0.0;
-		return this.tactics.stream().filter(t -> t.getExpectedPercentage() != null).mapToDouble(Tactic::getExpectedPercentage).sum();
 	}
 
 }

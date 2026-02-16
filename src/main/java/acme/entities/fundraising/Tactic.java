@@ -1,39 +1,42 @@
 
 package acme.entities.fundraising;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.Valid;
 
+import acme.client.components.basis.AbstractEntity;
+import acme.client.components.validation.Mandatory;
+import acme.client.components.validation.ValidScore;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Tactic {
+public class Tactic extends AbstractEntity {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long		id;
-
-	@NotBlank
+	@Mandatory
+	// TODO: @ValidHeader
+	@Column
 	private String		name;
 
-	@NotBlank
+	@Mandatory
+	// TODO: @ValidText
 	private String		notes;
 
-	@NotNull
+	@Mandatory
+	@ValidScore
+	@Column
 	private Double		expectedPercentage;
 
-	@NotNull
+	@Mandatory
+	@Valid
+	@Column
 	@Enumerated(EnumType.STRING)
 	private TacticKind	kind;
 
