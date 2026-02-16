@@ -71,19 +71,15 @@ public class Campaign extends AbstractEntity {
 
 
 	@Transient
-	//	@Mandatory
-	@Valid
 	public Double getMonthsActive() {
 		if (this.startMoment == null || this.endMoment == null)
 			return 0.0;
 
 		long diff = this.endMoment.getTime() - this.startMoment.getTime();
-		return diff / (1000.0 * 60 * 60 * 24 * 30); // Uso 30 dias ???
+		return diff / (1000.0 * 60 * 60 * 24 * 30);
 	}
 
 	@Transient
-	//	@Mandatory
-	//	@ValidNumber(min = 0)
 	public Double getEffort() {
 		double total = 0.0;
 		// Aquí sumo el esfuerzo de los Milestones que pertenezcan a esta Campaign
