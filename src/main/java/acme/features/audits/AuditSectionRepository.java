@@ -9,6 +9,6 @@ import acme.client.repositories.AbstractRepository;
 @Repository
 public interface AuditSectionRepository extends AbstractRepository {
 
-	@Query("Select SUM(as.hours) from AuditSection as where as.auditReport.id = :auditReportId")
+	@Query("Select SUM(a.hours) from AuditSection a where a.auditReport.id = :auditReportId")
 	Integer sumHoursByAuditReportId(int auditReportId);
 }
