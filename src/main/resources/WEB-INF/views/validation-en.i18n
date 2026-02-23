@@ -12,3 +12,7 @@ acme.validation.header.message  	= Must have from 1 to 75 characters
 acme.validation.text.message   		= Must have from 1 to 255 characters
 
 acme.validation.ticker.message			  = The ticker must have letters, digits, underscores, and hyphens only
+
+acme.validation.campaign.duplicated-ticker.message = The ticker is duplicated
+acme.validation.campaign.milestone.message = The campaign must have at least one milestone
+acme.validation.campaign.moments.message = Start moment must be before end moment
