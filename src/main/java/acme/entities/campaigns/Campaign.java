@@ -22,7 +22,7 @@ import acme.client.components.validation.ValidUrl;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
-import acme.features.campaigns.MilestoneRepository;
+import acme.features.campaigns.CampaignRepository;
 import acme.realms.Spokesperson;
 import lombok.Getter;
 import lombok.Setter;
@@ -77,7 +77,7 @@ public class Campaign extends AbstractEntity {
 
 	@Transient
 	@Autowired
-	private MilestoneRepository	milestoneRepository;
+	private CampaignRepository	campaignRepository;
 
 
 	@Transient
@@ -86,12 +86,13 @@ public class Campaign extends AbstractEntity {
 			return 0.0;
 
 		long diff = this.endMoment.getTime() - this.startMoment.getTime();
-		return diff / (1000.0 * 60 * 60 * 24 * 30);
+		double month = diff / (1000.0 * 60 * 60 * 24 * 30);
+		return Math.round(month * 10.0) / 10.0;
 	}
 
 	@Transient
 	public Double getEffort() {
-		Double total = this.milestoneRepository.sumEffortsByCampaignId(this.getId());
+		Double total = this.campaignRepository.sumEffortsByCampaignId(this.getId());
 		return total == null ? 0 : total;
 	}
 
