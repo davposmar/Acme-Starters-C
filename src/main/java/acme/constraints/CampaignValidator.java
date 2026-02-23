@@ -51,7 +51,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 			{
 				boolean correctMilestoneNumber;
 
-				correctMilestoneNumber = !campaign.getDraftMode() && this.repository.countMilestoneByCampaignId(campaign.getId()) >= 0;
+				correctMilestoneNumber = !campaign.getDraftMode() && this.repository.countMilestoneByCampaignId(campaign.getId()) > 0;
 
 				super.state(context, correctMilestoneNumber, "*", "acme.validation.campaign.milestone.message");
 			}
