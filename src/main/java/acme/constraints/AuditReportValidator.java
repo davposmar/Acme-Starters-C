@@ -67,7 +67,7 @@ public class AuditReportValidator extends AbstractValidator<ValidAuditReport, Au
 				boolean isEndFuture;
 				boolean isValidInterval;
 
-				if (auditReport.getDraftMode() || startMoment != null && endMoment != null) {
+				if (!auditReport.getDraftMode() && startMoment != null && endMoment != null) {
 					isStartFuture = MomentHelper.isFuture(startMoment);
 					isEndFuture = MomentHelper.isFuture(endMoment);
 					isValidInterval = MomentHelper.isAfter(endMoment, startMoment);
