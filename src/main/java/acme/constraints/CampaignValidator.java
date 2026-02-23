@@ -68,7 +68,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 					isEndFuture = MomentHelper.isFuture(endMoment);
 					isValidInterval = MomentHelper.isAfter(endMoment, startMoment);
 					correctMoments = isStartFuture && isEndFuture && isValidInterval;
-					super.state(context, correctMoments, "deadline", "acme.validation.audit-report.moments.message");
+					super.state(context, correctMoments, "deadline", "acme.validation.campaign.moments.message");
 				}
 			}
 			result = !super.hasErrors(context);
