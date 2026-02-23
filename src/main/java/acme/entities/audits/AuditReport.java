@@ -19,6 +19,7 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidAuditReport;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
@@ -30,6 +31,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidAuditReport
 public class AuditReport extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
@@ -88,7 +90,9 @@ public class AuditReport extends AbstractEntity {
 		Long startTime = this.getStartMoment().getTime();
 		Long endTime = this.getEndMoment().getTime();
 
-		return (endTime - startTime) / (1000.0 * 60 * 60 * 24 * 30);
+		double monthsActive = (endTime - startTime) / (1000.0 * 60 * 60 * 24 * 30);
+
+		return Math.round(monthsActive * 10.0) / 10.0;
 	}
 
 	@Transient
