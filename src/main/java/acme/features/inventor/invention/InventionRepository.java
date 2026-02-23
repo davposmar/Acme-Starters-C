@@ -1,5 +1,5 @@
 
-package acme.entities.inventions;
+package acme.features.inventor.invention;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

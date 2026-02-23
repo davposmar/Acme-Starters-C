@@ -21,6 +21,10 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidHeader;
+import acme.constraints.ValidText;
+import acme.constraints.ValidTicker;
+import acme.features.inventor.invention.InventionRepository;
 import acme.realms.Inventor;
 import lombok.Getter;
 import lombok.Setter;
@@ -37,17 +41,17 @@ public class Invention extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	// TODO: @ValidTicker
+	@ValidTicker
 	@Column(unique = true)
 	private String				ticker;
 
 	@Mandatory
-	// TODO: @ValidHeader
+	@ValidHeader
 	@Column
 	private String				name;
 
 	@Mandatory
-	// TODO: @ValidText
+	@ValidText
 	@Column
 	private String				description;
 
@@ -78,14 +82,12 @@ public class Invention extends AbstractEntity {
 	private InventionRepository	repository;
 
 
-	//@Mandatory ?
 	@Valid
 	@Transient
 	public Double getMonthsActive() {
 		return (double) ChronoUnit.MONTHS.between(this.getStartMoment().toInstant(), this.getEndMoment().toInstant());
 	}
-	//@Mandatory ?
-	//@ValidMoney(min = 0) ?
+
 	@Transient
 	public Money getCost() {
 		Money cost = new Money();
