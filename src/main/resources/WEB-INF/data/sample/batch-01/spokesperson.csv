@@ -1,0 +1,30 @@
+key,key:userAccount,cv,achievements,licensed
+# base entity,"","","",""
+spokesperson-00,user-account-spokesperson-00,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+# cv - standard variations,"","","",""
+spokesperson-01,user-account-spokesperson-01,L,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+spokesperson-02,user-account-spokesperson-02,Lo,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+spokesperson-03,user-account-spokesperson-03,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+spokesperson-04,user-account-spokesperson-04,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+spokesperson-05,user-account-spokesperson-05,โลเร็ม อิปซัม,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+spokesperson-06,user-account-spokesperson-06,لوريم إيبسوم,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+spokesperson-07,user-account-spokesperson-07,洛伦·伊普森,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+spokesperson-08,user-account-spokesperson-08,<marquee>Hacked</marquee>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+spokesperson-09,user-account-spokesperson-09,<script>alert('Hacked!');</script>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+spokesperson-10,user-account-spokesperson-10,'' or 'A' = 'A,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+# cv - no singular values
+# achievements - standard variations,"","","",""
+spokesperson-11,user-account-spokesperson-11,"Lorem ipsum dolor sit amet, consectetu",L,TRUE
+spokesperson-12,user-account-spokesperson-12,"Lorem ipsum dolor sit amet, consectetu",Lo,TRUE
+spokesperson-13,user-account-spokesperson-13,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",TRUE
+spokesperson-14,user-account-spokesperson-14,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",TRUE
+spokesperson-15,user-account-spokesperson-15,"Lorem ipsum dolor sit amet, consectetu",โลเร็ม อิปซัม,TRUE
+spokesperson-16,user-account-spokesperson-16,"Lorem ipsum dolor sit amet, consectetu",لوريم إيبسوم,TRUE
+spokesperson-17,user-account-spokesperson-17,"Lorem ipsum dolor sit amet, consectetu",洛伦·伊普森,TRUE
+spokesperson-18,user-account-spokesperson-18,"Lorem ipsum dolor sit amet, consectetu",<marquee>Hacked</marquee>,TRUE
+spokesperson-19,user-account-spokesperson-19,"Lorem ipsum dolor sit amet, consectetu",<script>alert('Hacked!');</script>,TRUE
+spokesperson-20,user-account-spokesperson-20,"Lorem ipsum dolor sit amet, consectetu",' or 'A' = 'A,TRUE
+# achievements - no singular values
+# licensed - standard variations
+spokesperson-21,user-account-spokesperson-21,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",FALSE
+# licensed - no singular values
