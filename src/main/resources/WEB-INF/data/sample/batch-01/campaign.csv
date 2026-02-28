@@ -18,7 +18,8 @@ campaign-11,TI00-Camp11,洛伦·伊普森,"Lorem ipsum dolor sit amet, consectet
 campaign-12,TI00-Camp12,<marquee>Hacked</marquee>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/06/01 09:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-00
 campaign-13,TI00-Camp13,<script>alert('Hacked!');</script>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/06/01 09:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-00
 campaign-14,TI00-Camp14,'' or 'A' = 'A,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/06/01 09:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-00
-# name - no singular values,"","","","","","","",""
+# name - singular values,"","","","","","","",""
+campaign-55,TI00-Camp55,☺,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/06/01 09:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-00
 # description - standard variations,"","","","","","","",""
 campaign-15,TI00-Camp15,"Lorem ipsum dolor sit amet, consectetu",L,2026/06/01 09:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-00
 campaign-16,TI00-Camp16,"Lorem ipsum dolor sit amet, consectetu",Lo,2026/06/01 09:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-00
@@ -30,7 +31,8 @@ campaign-21,TI00-Camp21,"Lorem ipsum dolor sit amet, consectetu",洛伦·伊普�
 campaign-22,TI00-Camp22,"Lorem ipsum dolor sit amet, consectetu",<marquee>Hacked</marquee>,2026/06/01 09:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-00
 campaign-23,TI00-Camp23,"Lorem ipsum dolor sit amet, consectetu",<script>alert('Hacked!');</script>,2026/06/01 09:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-00
 campaign-24,TI00-Camp24,"Lorem ipsum dolor sit amet, consectetu",' or 'A' = 'A,2026/06/01 09:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-00
-# description - no singular values
+# description - singular values
+campaign-57,TI00-Camp57,"Lorem ipsum dolor sit amet, consectetu",☺,2026/06/01 09:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-00
 # start-moment - standard variations,"","","","","","","",""
 campaign-25,TI00-Camp25,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/06/08 0:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-00
 campaign-26,TI00-Camp26,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/06/08 0:01,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-00

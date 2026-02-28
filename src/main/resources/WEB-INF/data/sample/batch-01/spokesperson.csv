@@ -12,7 +12,8 @@ spokesperson-07,user-account-spokesperson-07,洛伦·伊普森,"Lorem ipsum dolo
 spokesperson-08,user-account-spokesperson-08,<marquee>Hacked</marquee>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
 spokesperson-09,user-account-spokesperson-09,<script>alert('Hacked!');</script>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
 spokesperson-10,user-account-spokesperson-10,'' or 'A' = 'A,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
-# cv - no singular values
+# cv - singular values
+spokesperson-22,user-account-spokesperson-22,☺,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
 # achievements - standard variations,"","","",""
 spokesperson-11,user-account-spokesperson-11,"Lorem ipsum dolor sit amet, consectetu",L,TRUE
 spokesperson-12,user-account-spokesperson-12,"Lorem ipsum dolor sit amet, consectetu",Lo,TRUE
@@ -24,7 +25,8 @@ spokesperson-17,user-account-spokesperson-17,"Lorem ipsum dolor sit amet, consec
 spokesperson-18,user-account-spokesperson-18,"Lorem ipsum dolor sit amet, consectetu",<marquee>Hacked</marquee>,TRUE
 spokesperson-19,user-account-spokesperson-19,"Lorem ipsum dolor sit amet, consectetu",<script>alert('Hacked!');</script>,TRUE
 spokesperson-20,user-account-spokesperson-20,"Lorem ipsum dolor sit amet, consectetu",' or 'A' = 'A,TRUE
-# achievements - no singular values
+# achievements - singular values
+spokesperson-23,user-account-spokesperson-23,"Lorem ipsum dolor sit amet, consectetu",☺,TRUE
 # licensed - standard variations
 spokesperson-21,user-account-spokesperson-21,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",FALSE
 # licensed - no singular values
