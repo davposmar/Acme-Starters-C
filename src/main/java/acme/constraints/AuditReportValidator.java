@@ -72,7 +72,7 @@ public class AuditReportValidator extends AbstractValidator<ValidAuditReport, Au
 					isEndFuture = MomentHelper.isFuture(endMoment);
 					isValidInterval = MomentHelper.isAfter(endMoment, startMoment);
 					correctMoments = isStartFuture && isEndFuture && isValidInterval;
-					super.state(context, correctMoments, "deadline", "acme.validation.audit-report.moments.message");
+					super.state(context, correctMoments, "endMoment", "acme.validation.audit-report.moments.message");
 				}
 			}
 			result = !super.hasErrors(context);
