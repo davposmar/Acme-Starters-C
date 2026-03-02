@@ -41,8 +41,8 @@ campaign-28,TI00-Camp28,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum do
 # start-moment - singular values,"","","","","","","",""
 campaign-58,TI00-Camp58,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2028/02/29 00:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-00
 # end-moment - standard variations,"","","","","","","",""
-campaign-29,TI00-Camp29,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/06/01 09:00,2026/06/08 0:00,http://lorem.com/ipsum,TRUE,spokesperson-00
-campaign-30,TI00-Camp30,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/06/01 09:00,2026/06/08 0:01,http://lorem.com/ipsum,TRUE,spokesperson-00
+campaign-29,TI00-Camp29,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 0:00,2025/01/01 0:01,http://lorem.com/ipsum,TRUE,spokesperson-00
+campaign-30,TI00-Camp30,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 0:01,2025/01/01 0:02,http://lorem.com/ipsum,TRUE,spokesperson-00
 campaign-31,TI00-Camp31,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/06/01 09:00,2200/12/31 23:58,http://lorem.com/ipsum,TRUE,spokesperson-00
 campaign-32,TI00-Camp32,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/06/01 09:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-00
 # end-moment - singular values,"","","","","","","",""
