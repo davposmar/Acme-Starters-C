@@ -53,22 +53,16 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 
 				correctMilestoneNumber = campaign.getDraftMode() || this.repository.countMilestoneByCampaignId(campaign.getId()) > 0;
 
-				super.state(context, correctMilestoneNumber, "*", "acme.validation.campaign.milestone.message");
+				super.state(context, correctMilestoneNumber, "draftMode", "acme.validation.campaign.milestone.message");
 			}
 			{
 				Date startMoment = campaign.getStartMoment();
 				Date endMoment = campaign.getEndMoment();
-				boolean correctMoments;
-				boolean isStartFuture;
-				boolean isEndFuture;
 				boolean isValidInterval;
 
-				if (!campaign.getDraftMode() && startMoment != null && endMoment != null) {
-					isStartFuture = MomentHelper.isFuture(startMoment);
-					isEndFuture = MomentHelper.isFuture(endMoment);
+				if (startMoment != null && endMoment != null) {
 					isValidInterval = MomentHelper.isAfter(endMoment, startMoment);
-					correctMoments = isStartFuture && isEndFuture && isValidInterval;
-					super.state(context, correctMoments, "endMoment", "acme.validation.campaign.moments.message");
+					super.state(context, isValidInterval, "endMoment", "acme.validation.campaign.moments.message");
 				}
 			}
 			result = !super.hasErrors(context);
