@@ -10,4 +10,4 @@
 
 acme.validation.audit-report.duplicated-ticker.message = Referencia ya usada.
 acme.validation.audit-report.minimun-sections.message  = Debe tener al menos un AuditSection antes de poder publicarse.
-acme.validation.audit-report.moments.message		   = El momento de inicio debe ser anterior al momento final.
+acme.validation.audit-report.interval.message		   = El momento de inicio debe ser anterior al momento final.
