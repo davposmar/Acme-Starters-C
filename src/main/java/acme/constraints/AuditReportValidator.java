@@ -62,8 +62,6 @@ public class AuditReportValidator extends AbstractValidator<ValidAuditReport, Au
 			{
 				Date startMoment = auditReport.getStartMoment();
 				Date endMoment = auditReport.getEndMoment();
-				boolean isStartFuture;
-				boolean isEndFuture;
 				boolean isValidInterval;
 
 				if (!auditReport.getDraftMode() && startMoment != null && endMoment != null) {
