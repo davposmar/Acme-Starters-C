@@ -54,10 +54,12 @@ public class AuditReportValidator extends AbstractValidator<ValidAuditReport, Au
 			}
 			{
 				boolean correctMinimunSections;
+				Integer id = auditReport.getId();
+				if (id != null) {
+					correctMinimunSections = auditReport.getDraftMode() || this.sectionRepository.findCountAuditReportsByAuditReportId(id) >= 1;
 
-				correctMinimunSections = auditReport.getDraftMode() || this.sectionRepository.findCountAuditReportsByAuditReportId(auditReport.getId()) >= 1;
-
-				super.state(context, correctMinimunSections, "draftMode", "acme.validation.audit-report.minimun-sections.message");
+					super.state(context, correctMinimunSections, "draftMode", "acme.validation.audit-report.minimun-sections.message");
+				}
 			}
 			{
 				Date startMoment = auditReport.getStartMoment();
