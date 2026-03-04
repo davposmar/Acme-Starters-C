@@ -1,0 +1,5 @@
+key,enabled,identity,password,username
+user-account-auditor-00,true,"UserIdentity{name: 'Eren', surname: 'auditor', email: 'eren@acme.com'}",auditor0,auditor0
+user-account-auditor-01,true,"UserIdentity{name: 'Mikasa', surname: 'аудитор', email: 'mikasa@acme.com'}","auditor1",""
+user-account-auditor-02,true,"UserIdentity{name: 'Levy', surname: '監査人', email: 'levy@acme.com'}","",auditor2
+user-account-auditor-03,true,"UserIdentity{name: 'Eren', surname: 'auditor', email: 'eren@acme.com'}",auditor3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem"
