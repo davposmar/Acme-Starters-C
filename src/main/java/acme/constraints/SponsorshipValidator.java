@@ -57,7 +57,7 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 
 				correctMinimunDonations = sponsorship.getDraftMode() || this.donationRepository.findCountDonationsBySponsorshipId(sponsorship.getId()) >= 1;
 
-				super.state(context, correctMinimunDonations, "draftMode", "acme.validation.audit-report.minimun-donations.message");
+				super.state(context, correctMinimunDonations, "draftMode", "acme.validation.sponsorship.minimun-donations.message");
 			}
 			{
 				Date startMoment = sponsorship.getStartMoment();

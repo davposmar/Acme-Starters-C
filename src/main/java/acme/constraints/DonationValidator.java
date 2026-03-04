@@ -32,9 +32,11 @@ public class DonationValidator extends AbstractValidator<ValidDonation, Donation
 			{
 				String validCurrency = "EUR";
 				boolean validMoney;
-				validMoney = donation.getMoney().getAmount() != null && donation.getMoney().getCurrency() != null && donation.getMoney().getCurrency().equals(validCurrency);
 
-				super.state(context, validMoney, "money", "acme.validation.donation.money-currency.message");
+				if (donation.getMoney().getAmount() != null && donation.getMoney().getCurrency() != null) {
+					validMoney = donation.getMoney().getCurrency().equals(validCurrency);
+					super.state(context, validMoney, "money", "acme.validation.donation.money-currency.message");
+				}
 			}
 			result = !super.hasErrors(context);
 		}
