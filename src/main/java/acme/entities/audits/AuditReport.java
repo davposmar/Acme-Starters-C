@@ -19,6 +19,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
+import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidAuditReport;
@@ -79,11 +80,15 @@ public class AuditReport extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
+	@Mandatory
+	@Valid
 	@Transient
 	@Autowired
 	private AuditSectionRepository	sectionRepository;
 
 
+	@Mandatory
+	@Valid
 	@Transient
 	public Double getMonthsActive() {
 		if (this.getStartMoment() == null || this.getEndMoment() == null)
@@ -94,6 +99,8 @@ public class AuditReport extends AbstractEntity {
 		return Math.round(monthsActive * 10.0) / 10.0;
 	}
 
+	@Mandatory
+	@ValidNumber(min = 0)
 	@Transient
 	public Integer getHours() {
 		Integer totalHours = this.sectionRepository.sumHoursByAuditReportId(this.getId());
