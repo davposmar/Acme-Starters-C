@@ -22,6 +22,7 @@ any.audit-report.form.label.monthsActive = Months Active: (Calculated)
 any.audit-report.form.label.hours = Hours: (Calculated)
 
 any.audit-report.form.button.audit-sections = Audit Sections
+any.audit-report.form.button.auditor = Auditor
 
 any.audit-report.list.label.ticker = Ticker 
 any.audit-report.list.label.name = Name

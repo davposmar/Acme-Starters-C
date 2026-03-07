@@ -12,7 +12,7 @@ any.audit-report.form.title = Detalles de informe de auditoría
 any.audit-report.list.title = Lista de informes de auditoría
 
 any.audit-report.form.label.ticker = Referencia:
-any.audit-report.form.label.name = Name:
+any.audit-report.form.label.name = Nombre:
 any.audit-report.form.label.description = Descripción:
 any.audit-report.form.label.startMoment = Fecha de comienzo:
 any.audit-report.form.label.endMoment = Fecha de fin:
@@ -22,9 +22,10 @@ any.audit-report.form.label.monthsActive = Meses Activo: (Calculado)
 any.audit-report.form.label.hours = Horas: (Calculado)
 
 any.audit-report.form.button.audit-sections = Secciones de Auditoría
+any.audit-report.form.button.auditor = Auditor
 
-any.audit-report.list.label.ticker = Ticker 
-any.audit-report.list.label.name = Name
-any.audit-report.list.label.startMoment = Start Moment
-any.audit-report.list.label.endMoment = End Moment
+any.audit-report.list.label.ticker = Referencia 
+any.audit-report.list.label.name = Nombre
+any.audit-report.list.label.startMoment = Fecha de comienzo
+any.audit-report.list.label.endMoment = Fecha de Fin
 any.audit-report.list.label.auditor.identity.fullName = Auditor
