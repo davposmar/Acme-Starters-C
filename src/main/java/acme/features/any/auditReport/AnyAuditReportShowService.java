@@ -15,6 +15,7 @@ package acme.features.any.auditReport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.models.Tuple;
 import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.entities.audits.AuditReport;
@@ -51,9 +52,11 @@ public class AnyAuditReportShowService extends AbstractService<Any, AuditReport>
 
 	@Override
 	public void unbind() {
+		Tuple tuple;
 
-		super.unbindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
-
+		tuple = super.unbindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "auditor.identity.fullName");
+		tuple.put("monthsActive", this.auditReport.getMonthsActive());
+		tuple.put("hours", this.auditReport.getHours());
 	}
 
 }
