@@ -50,10 +50,13 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 			}
 			{
 				boolean correctMilestoneNumber;
+				Integer id = campaign.getId();
+				if (id != null) {
+					correctMilestoneNumber = campaign.getDraftMode() || this.repository.countMilestoneByCampaignId(id) > 0;
 
-				correctMilestoneNumber = campaign.getDraftMode() || this.repository.countMilestoneByCampaignId(campaign.getId()) > 0;
+					super.state(context, correctMilestoneNumber, "*", "acme.validation.campaign.milestone.message");
+				}
 
-				super.state(context, correctMilestoneNumber, "*", "acme.validation.campaign.milestone.message");
 			}
 			{
 				Date startMoment = campaign.getStartMoment();
