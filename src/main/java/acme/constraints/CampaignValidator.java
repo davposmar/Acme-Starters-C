@@ -53,7 +53,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 
 				correctMilestoneNumber = campaign.getDraftMode() || this.repository.countMilestoneByCampaignId(campaign.getId()) > 0;
 
-				super.state(context, correctMilestoneNumber, "draftMode", "acme.validation.campaign.milestone.message");
+				super.state(context, correctMilestoneNumber, "*", "acme.validation.campaign.milestone.message");
 			}
 			{
 				Date startMoment = campaign.getStartMoment();
