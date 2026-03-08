@@ -1,7 +1,6 @@
 
 package acme.entities.inventions;
 
-import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -22,6 +21,7 @@ import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.constraints.ValidHeader;
+import acme.constraints.ValidInvention;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
 import acme.features.inventor.invention.InventionRepository;
@@ -32,6 +32,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidInvention
 public class Invention extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
@@ -82,10 +83,14 @@ public class Invention extends AbstractEntity {
 	private InventionRepository	repository;
 
 
-	@Valid
 	@Transient
 	public Double getMonthsActive() {
-		return (double) ChronoUnit.MONTHS.between(this.getStartMoment().toInstant(), this.getEndMoment().toInstant());
+		if (this.startMoment == null || this.endMoment == null)
+			return 0.0;
+
+		long diff = this.endMoment.getTime() - this.startMoment.getTime();
+		double month = diff / (1000.0 * 60 * 60 * 24 * 30);
+		return Math.round(month * 10.0) / 10.0;
 	}
 
 	@Transient
