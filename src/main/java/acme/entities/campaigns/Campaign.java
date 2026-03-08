@@ -1,6 +1,7 @@
 
 package acme.entities.campaigns;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -20,6 +21,7 @@ import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidCampaign;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
@@ -78,6 +80,8 @@ public class Campaign extends AbstractEntity {
 
 	// Derived attributes --------------------------------------------
 
+	@Mandatory
+	@Valid
 	@Transient
 	@Autowired
 	private CampaignRepository	campaignRepository;
@@ -90,8 +94,7 @@ public class Campaign extends AbstractEntity {
 		if (this.startMoment == null || this.endMoment == null)
 			return 0.0;
 
-		long diff = this.endMoment.getTime() - this.startMoment.getTime();
-		double month = diff / (1000.0 * 60 * 60 * 24 * 30);
+		double month = MomentHelper.computeDifference(this.startMoment, this.endMoment, ChronoUnit.MONTHS);
 		return Math.round(month * 10.0) / 10.0;
 	}
 
