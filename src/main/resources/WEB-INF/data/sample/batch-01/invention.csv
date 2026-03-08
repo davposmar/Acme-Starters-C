@@ -1,0 +1,39 @@
+key,key:inventor,ticker,name,description,startMoment,endMoment,moreInfo,draftMode
+# base entity
+invention-01,inventor-01,AB12-LoremIP,My first invention,This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+# Ticker
+invention-02,inventor-01,AB12-LoremA,My first invention,This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-03,inventor-01,AB12-LoremAB,My first invention,This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-04,inventor-01,AB12-LoremABC,My first invention,This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-05,inventor-01,AB12-LoremABCD,My first invention,This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-06,inventor-01,AB12-LoremABCDE,My first invention,This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+# Name min - 1 max - 75
+invention-07,inventor-01,AB12-LoremIP1,"L",This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-08,inventor-01,AB12-LoremIP2,Lo,This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-09,inventor-01,AB12-LoremIP3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t",This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-10,inventor-01,AB12-LoremIP4,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te",This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-11,inventor-01,AB12-LoremIP5,"โลเร็ม อิปซัม",This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-12,inventor-01,AB12-LoremIP6,"لوريم إيبسوم",This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-13,inventor-01,AB12-LoremIP7,"洛伦·伊普森",This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-14,inventor-01,AB12-LoremIP8,"<marquee>Hacked</marquee>",This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-15,inventor-01,AB12-LoremIP9,"<script>alert(‘Hacked!’);</script>",This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-16,inventor-01,AB12-LoremIP10,"' or 'A' = 'A ",This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+# Name - singular 
+invention-17,inventor-01,AB12-LoremIP11,"😄😔😄✅😒👍👌😔",This is a valid one,2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+# Description 
+invention-18,inventor-01,AB12-LoremIP12,My first invention,"L",2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-19,inventor-01,AB12-LoremIP13,My first invention,"Lo",2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-20,inventor-01,AB12-LoremIP14,My first invention,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-21,inventor-01,AB12-LoremIP15,My first invention,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+# Description - singular
+invention-22,inventor-01,AB12-LoremIP16,My first invention,"😔👌👌👍😒😄",2026/01/01 00:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+
+# startMoment - Future
+invention-23,inventor-01,AB12-LoremIP17,My first invention,This is a valid one,2025/01/01 0:00,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-24,inventor-01,AB12-LoremIP18,My first invention,This is a valid one, 2025/01/01 0:01,2028/01/28 00:00,http://www.lorem-ipsum.org,true
+invention-25,inventor-01,AB12-LoremIP19,My first invention,This is a valid one, 2200/12/31 23:57,2200/12/31 23:59,http://www.lorem-ipsum.org,true
+invention-26,inventor-01,AB12-LoremIP20,My first invention,This is a valid one, 2200/12/31 23:58,2200/12/31 23:59,http://www.lorem-ipsum.org,true
+# startMoment  - singular
+invention-27,inventor-01,AB12-LoremIP21,My first invention,This is a valid one,2028/02/29 0:00,2028/07/28 00:00,http://www.lorem-ipsum.org,true
+# endMoment - Future - singular
+invention-28,inventor-01,AB12-LoremIP22,My first invention,This is a valid one,2028/01/28 00:00, 2028/02/29 0:00,http://www.lorem-ipsum.org,true
