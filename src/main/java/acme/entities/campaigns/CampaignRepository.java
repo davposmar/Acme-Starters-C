@@ -1,11 +1,10 @@
 
-package acme.features.campaigns;
+package acme.entities.campaigns;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
-import acme.entities.campaigns.Campaign;
 
 @Repository
 public interface CampaignRepository extends AbstractRepository {
