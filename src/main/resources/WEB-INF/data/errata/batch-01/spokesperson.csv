@@ -1,0 +1,14 @@
+key,key:userAccount,cv,achievements,licensed
+# base entity,"","","",""
+spokesperson-00,user-account-spokesperson-00,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+# cv - standard variations,"","","",""
+spokesperson-01,user-account-spokesperson-00,"","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+spokesperson-02,user-account-spokesperson-00,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+# cv - no singular values,"","","",""
+# achievements - standard variations,"","","",""
+spokesperson-03,user-account-spokesperson-00,"Lorem ipsum dolor sit amet, consectetu","",TRUE
+spokesperson-04,user-account-spokesperson-00,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",TRUE
+# achievements - no singular values,"","","",""
+# licensed - standard variations,"","","",""
+spokesperson-05,user-account-spokesperson-00,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",""
+# licensed - no singular values,"","","",""
