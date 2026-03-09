@@ -2,3 +2,7 @@ key,enabled,identity,password,username
 user-account-inventor-01,true,"UserIdentity{name: 'inventor1', surname: 'Acme', email: 'inventor1@acme.com'}","",inventor1
 user-account-inventor-02,true,"UserIdentity{name: 'inventor2', surname: 'Acme', email: 'inventor2@acme.com'}","",inventor2
 user-account-inventor-03,true,"UserIdentity{name: 'inventor3', surname: 'Acme', email: 'inventor3@acme.com'}","",inventor3
+user-account-spokesperson-00,true,"UserIdentity{name: 'Tony', surname: 'Stark', email: 'spokesperson00@acme.com'}",spokesperson0,spokesperson0
+user-account-spokesperson-01,true,"UserIdentity{name: 'Peter', surname: 'Parker', email: 'spokesperson01@acme.com'}","spokesperson1",""
+user-account-spokesperson-02,true,"UserIdentity{name: 'Natasha', surname: 'Romanoff', email: 'spokesperson02@acme.com'}","",spokesperson2
+user-account-spokesperson-03,true,"UserIdentity{name: 'Steve', surname: 'Rogers', email: 'spokesperson03@acme.com'}",spokesperson3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem"
