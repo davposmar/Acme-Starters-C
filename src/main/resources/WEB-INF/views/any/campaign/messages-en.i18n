@@ -20,6 +20,7 @@ any.campaign.form.label.endMoment = End moment:
 any.campaign.form.label.moreInfo = More info: (Optional)
 
 any.campaign.form.button.milestones = Milestones
+any.campaign.form.button.spokesperson = Spokesperson
 
 any.campaign.list.label.ticker = Ticker
 any.campaign.list.label.name = Name

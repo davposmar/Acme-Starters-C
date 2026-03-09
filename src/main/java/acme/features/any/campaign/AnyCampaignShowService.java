@@ -64,6 +64,8 @@ public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
 		choices = SelectChoices.from(spokespersons, "identity.fullName", this.campaign.getSpokesperson());
 
 		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "monthsActive", "effort");
+		tuple.put("spokespersonId", this.campaign.getSpokesperson().getId());
+
 		tuple.put("spokesperson", choices.getSelected().getKey());
 		tuple.put("spokespersons", choices);
 	}
