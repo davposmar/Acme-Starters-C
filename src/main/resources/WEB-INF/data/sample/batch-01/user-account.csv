@@ -5,6 +5,9 @@ user-account-consumer-03,true,"UserIdentity{name: 'Manolo', surname: '之乎路�
 user-account-provider-01,true,"UserIdentity{name: 'Laurel', surname: 'Provider', email: 'laurel@acme.com'}",provider1,provider1
 user-account-provider-02,true,"UserIdentity{name: 'Martina', surname: 'коза თხა', email: 'martina@acme.com'}",provider2,provider2
 user-account-provider-03,true,"UserIdentity{name: 'Antonia', surname: 'אבטיח Æløzå', email: 'antonia@acme.com'}",provider3,provider3
+user-account-auditor-01,true,"UserIdentity{name: 'Eren', surname: 'auditor', email: 'eren@acme.com'}",auditor1,auditor1
+user-account-auditor-02,true,"UserIdentity{name: 'Mikasa', surname: 'аудитор', email: 'mikasa@acme.com'}",auditor2,auditor2
+user-account-auditor-03,true,"UserIdentity{name: 'Levy', surname: '監査人', email: 'levy@acme.com'}",auditor3,auditor3
 user-account-spokesperson-00,true,"UserIdentity{name: 'Tony', surname: 'Stark', email: 'spokesperson00@acme.com'}",spokesperson0,spokesperson0
 user-account-spokesperson-01,true,"UserIdentity{name: 'Peter', surname: 'Parker', email: 'spokesperson01@acme.com'}",spokesperson1,spokesperson1
 user-account-spokesperson-02,true,"UserIdentity{name: 'Natasha', surname: 'Romanoff', email: 'spokesperson02@acme.com'}",spokesperson2,spokesperson2
