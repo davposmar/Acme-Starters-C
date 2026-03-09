@@ -10,33 +10,36 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.any.auditReport;
+package acme.features.auditor.auditReport;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.entities.audits.AuditReport;
+import acme.realms.Auditor;
 
 @Service
-public class AnyAuditReportListService extends AbstractService<Any, AuditReport> {
+public class AuditorAuditReportListService extends AbstractService<Auditor, AuditReport> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AnyAuditReportRepository	repository;
+	private AuditorAuditReportRepository	repository;
 
-	private Collection<AuditReport>		auditReports;
+	private Collection<AuditReport>			auditReports;
 
 	// AbstractService interface -------------------------------------------
 
 
 	@Override
 	public void load() {
-		this.auditReports = this.repository.findPublishedAuditReports();
+		int auditorId;
+
+		auditorId = super.getRequest().getPrincipal().getActiveRealm().getId();
+		this.auditReports = this.repository.findAuditReportsByAuditorId(auditorId);
 	}
 
 	@Override

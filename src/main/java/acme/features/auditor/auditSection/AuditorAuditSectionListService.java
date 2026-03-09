@@ -1,5 +1,5 @@
 /*
- * AuditorAuditReportListService.java
+ * AuditorAuditSectionListService.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -10,45 +10,53 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.any.auditReport;
+package acme.features.auditor.auditSection;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.entities.audits.AuditReport;
+import acme.entities.audits.AuditSection;
+import acme.realms.Auditor;
 
 @Service
-public class AnyAuditReportListService extends AbstractService<Any, AuditReport> {
+public class AuditorAuditSectionListService extends AbstractService<Auditor, AuditSection> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AnyAuditReportRepository	repository;
+	private AuditorAuditSectionRepository	repository;
 
-	private Collection<AuditReport>		auditReports;
+	private AuditReport						auditReport;
+	private Collection<AuditSection>		auditSections;
 
 	// AbstractService interface -------------------------------------------
 
 
 	@Override
 	public void load() {
-		this.auditReports = this.repository.findPublishedAuditReports();
+		int auditReportId;
+
+		auditReportId = super.getRequest().getData("auditReportId", int.class);
+		this.auditReport = this.repository.findAuditReportById(auditReportId);
+		this.auditSections = this.repository.findAuditSectionsByAuditReportId(auditReportId);
 	}
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status;
+
+		status = this.auditReport != null && (!this.auditReport.getDraftMode() || this.auditReport.getAuditor().isPrincipal());
+
+		super.setAuthorised(status);
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.auditReports, //
-			"ticker", "name", "description", "startMoment", "endMoment",//
-			"auditor.identity.fullName");
+		super.unbindObjects(this.auditSections, "name", "notes", "hours", "kind");
 	}
 
 }

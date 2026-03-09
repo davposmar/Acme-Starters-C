@@ -1,5 +1,5 @@
 /*
- * AuditorAuditSectionRepository.java
+ * AnyAuditorRepository.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.any.auditSection;
+package acme.features.auditor.auditReport;
 
 import java.util.Collection;
 
@@ -19,18 +19,14 @@ import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
 import acme.entities.audits.AuditReport;
-import acme.entities.audits.AuditSection;
 
 @Repository
-public interface AnyAuditSectionRepository extends AbstractRepository {
+public interface AuditorAuditReportRepository extends AbstractRepository {
+
+	@Query("select ar from AuditReport ar where ar.auditor.id = :auditorId")
+	Collection<AuditReport> findAuditReportsByAuditorId(int auditorId);
 
 	@Query("select ar from AuditReport ar where ar.id = :auditReportId")
 	AuditReport findAuditReportById(int auditReportId);
-
-	@Query("select a from AuditSection a where a.id = :id")
-	AuditSection findAuditSectionById(int id);
-
-	@Query("select a from AuditSection a where a.auditReport.id = :auditReportId")
-	Collection<AuditSection> findAuditSectionsByAuditReportId(int auditReportId);
 
 }

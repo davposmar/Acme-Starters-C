@@ -13,5 +13,5 @@ any.auditor.form.title = Auditor
 any.auditor.form.label.identity.fullName = Full Name:
 any.auditor.form.label.firm = Firm:
 any.auditor.form.label.highlights = Highlights:
-any.auditor.form.label.solicitor = Solicitor:
+any.auditor.form.label.solicitor = Solicitor
 any.auditor.form.label.identity.email = Email:
