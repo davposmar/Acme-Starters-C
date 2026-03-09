@@ -10,27 +10,27 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.any.auditSection;
+package acme.features.auditor.auditSection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
-import acme.client.components.principals.Any;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.audits.AuditSection;
 import acme.entities.audits.SectionKind;
+import acme.realms.Auditor;
 
 @Service
-public class AnyAuditSectionShowService extends AbstractService<Any, AuditSection> {
+public class AuditorAuditSectionShowService extends AbstractService<Auditor, AuditSection> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AnyAuditSectionRepository	repository;
+	private AuditorAuditSectionRepository	repository;
 
-	private AuditSection				auditSection;
+	private AuditSection					auditSection;
 
 	// AbstractService interface -------------------------------------------
 
@@ -47,7 +47,7 @@ public class AnyAuditSectionShowService extends AbstractService<Any, AuditSectio
 	public void authorise() {
 		boolean status;
 
-		status = this.auditSection != null && !this.auditSection.getAuditReport().getDraftMode();
+		status = this.auditSection != null && (this.auditSection.getAuditReport().getAuditor().isPrincipal() || !this.auditSection.getAuditReport().getDraftMode());
 
 		super.setAuthorised(status);
 	}

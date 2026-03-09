@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.any.auditSection;
+package acme.features.auditor.auditSection;
 
 import java.util.Collection;
 
@@ -22,7 +22,7 @@ import acme.entities.audits.AuditReport;
 import acme.entities.audits.AuditSection;
 
 @Repository
-public interface AnyAuditSectionRepository extends AbstractRepository {
+public interface AuditorAuditSectionRepository extends AbstractRepository {
 
 	@Query("select ar from AuditReport ar where ar.id = :auditReportId")
 	AuditReport findAuditReportById(int auditReportId);

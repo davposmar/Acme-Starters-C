@@ -19,13 +19,13 @@
 <acme:menu-bar>
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
-			<acme:menu-suboption code="master.menu.anonymous.list-audit-reports" action="/any/audit-report/list" /><acme:menu-suboption code="master.menu.anonymous.list-campaigns" action="/any/campaign/list" />
+			<acme:menu-suboption code="master.menu.anonymous.list-audit-reports" action="/any/audit-report/list" />
+			<acme:menu-suboption code="master.menu.anonymous.list-campaigns" action="/any/campaign/list" />
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.anonymous.list-audit-reports" action="/any/audit-report/list" />
-      <acme:menu-suboption code="master.menu.anonymous.list-campaigns" action="/any/campaign/list" />
+      		<acme:menu-suboption code="master.menu.anonymous.list-campaigns" action="/any/campaign/list" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
@@ -44,6 +44,11 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRealm('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.auditor" access="hasRealm('Auditor')">
+			<acme:menu-suboption code="master.menu.auditor.list-my-audit-reports" action="/auditor/audit-report/list" />
+		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>		
