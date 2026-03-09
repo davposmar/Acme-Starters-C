@@ -1,4 +1,4 @@
-# validation-en.i18n
+# validation-es.i18n
 #
 # Copyright (C) 2012-2026 Rafael Corchuelo.
 #
@@ -8,7 +8,6 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-acme.validation.header.message  	= Must have from 1 to 75 characters
-acme.validation.text.message   		= Must have from 1 to 255 characters
-
-acme.validation.ticker.message			  = The reference must contain 2 uppercase letters, 2 digits, a hyphen, and be between 5 and 10 characters long, including only letters, digits, and underscores
+acme.validation.campaign.duplicated-ticker.message = Referencia ya usada
+acme.validation.campaign.milestone.message = La campaña tiene que tener tiene que tener al menos un hito
+acme.validation.campaign.moments.message = El momento de inicio debe ser anterior al momento final

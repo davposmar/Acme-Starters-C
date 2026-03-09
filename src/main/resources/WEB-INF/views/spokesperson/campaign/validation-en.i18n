@@ -8,7 +8,6 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-acme.validation.header.message  	= Must have from 1 to 75 characters
-acme.validation.text.message   		= Must have from 1 to 255 characters
-
-acme.validation.ticker.message			  = The reference must contain 2 uppercase letters, 2 digits, a hyphen, and be between 5 and 10 characters long, including only letters, digits, and underscores
+acme.validation.campaign.duplicated-ticker.message = The ticker is duplicated
+acme.validation.campaign.milestone.message = The campaign must have at least one milestone
+acme.validation.campaign.moments.message = Start moment must be before end moment

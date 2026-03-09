@@ -1,4 +1,4 @@
-# validation-en.i18n
+# messages-es.i18n
 #
 # Copyright (C) 2012-2026 Rafael Corchuelo.
 #
@@ -8,7 +8,15 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-acme.validation.header.message  	= Must have from 1 to 75 characters
-acme.validation.text.message   		= Must have from 1 to 255 characters
+any.milestone.form.title = Detalles de hito
+any.milestone.list.title = Lista de hitos
 
-acme.validation.ticker.message			  = The reference must contain 2 uppercase letters, 2 digits, a hyphen, and be between 5 and 10 characters long, including only letters, digits, and underscores
+any.milestone.form.label.campaign = Campaña:
+any.milestone.form.label.title = Título:
+any.milestone.form.label.achievements = Logros:
+any.milestone.form.label.effort = Esfuerzo:
+any.milestone.form.label.kind = Tipo:
+
+any.milestone.list.label.title = Título
+any.milestone.list.label.kind = Tipo
+any.milestone.list.label.effort = Esfuerzo

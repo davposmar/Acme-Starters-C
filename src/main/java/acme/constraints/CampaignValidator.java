@@ -11,7 +11,7 @@ import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
 import acme.entities.campaigns.Campaign;
-import acme.features.campaigns.CampaignRepository;
+import acme.entities.campaigns.CampaignRepository;
 
 @Validator
 public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign> {
@@ -50,20 +50,22 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 			}
 			{
 				boolean correctMilestoneNumber;
+				Integer id = campaign.getId();
+				if (id != null) {
+					correctMilestoneNumber = campaign.getDraftMode() || this.repository.countMilestoneByCampaignId(id) > 0;
 
-				correctMilestoneNumber = !campaign.getDraftMode() && this.repository.countMilestoneByCampaignId(campaign.getId()) > 0;
+					super.state(context, correctMilestoneNumber, "*", "acme.validation.campaign.milestone.message");
+				}
 
-				super.state(context, correctMilestoneNumber, "*", "acme.validation.campaign.milestone.message");
 			}
 			{
 				Date startMoment = campaign.getStartMoment();
 				Date endMoment = campaign.getEndMoment();
-				boolean correctDeadline;
+				boolean isValidInterval;
 
 				if (startMoment != null && endMoment != null) {
-					correctDeadline = MomentHelper.isAfter(endMoment, startMoment);
-
-					super.state(context, correctDeadline, "deadline", "acme.validation.campaign.deadline.message");
+					isValidInterval = MomentHelper.isAfter(endMoment, startMoment);
+					super.state(context, isValidInterval, "endMoment", "acme.validation.campaign.moments.message");
 				}
 			}
 			result = !super.hasErrors(context);
