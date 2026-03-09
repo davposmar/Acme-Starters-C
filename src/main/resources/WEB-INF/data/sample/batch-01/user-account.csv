@@ -8,3 +8,27 @@ user-account-provider-03,true,"UserIdentity{name: 'Antonia', surname: 'אבטי�
 user-account-auditor-01,true,"UserIdentity{name: 'Eren', surname: 'auditor', email: 'eren@acme.com'}",auditor1,auditor1
 user-account-auditor-02,true,"UserIdentity{name: 'Mikasa', surname: 'аудитор', email: 'mikasa@acme.com'}",auditor2,auditor2
 user-account-auditor-03,true,"UserIdentity{name: 'Levy', surname: '監査人', email: 'levy@acme.com'}",auditor3,auditor3
+user-account-spokesperson-00,true,"UserIdentity{name: 'Tony', surname: 'Stark', email: 'spokesperson00@acme.com'}",spokesperson0,spokesperson0
+user-account-spokesperson-01,true,"UserIdentity{name: 'Peter', surname: 'Parker', email: 'spokesperson01@acme.com'}",spokesperson1,spokesperson1
+user-account-spokesperson-02,true,"UserIdentity{name: 'Natasha', surname: 'Romanoff', email: 'spokesperson02@acme.com'}",spokesperson2,spokesperson2
+user-account-spokesperson-03,true,"UserIdentity{name: 'Steve', surname: 'Rogers', email: 'spokesperson03@acme.com'}",spokesperson3,spokesperson3
+user-account-spokesperson-04,true,"UserIdentity{name: 'Thor', surname: 'Odinson', email: 'spokesperson04@acme.com'}",spokesperson4,spokesperson4
+user-account-spokesperson-05,true,"UserIdentity{name: 'Bruce', surname: 'Banner', email: 'spokesperson05@acme.com'}",spokesperson5,spokesperson5
+user-account-spokesperson-06,true,"UserIdentity{name: 'Clint', surname: 'Barton', email: 'spokesperson06@acme.com'}",spokesperson6,spokesperson6
+user-account-spokesperson-07,true,"UserIdentity{name: 'TChalla', surname: 'Wakanda', email: 'spokesperson07@acme.com'}",spokesperson7,spokesperson7
+user-account-spokesperson-08,true,"UserIdentity{name: 'Stephen', surname: 'Strange', email: 'spokesperson08@acme.com'}",spokesperson8,spokesperson8
+user-account-spokesperson-09,true,"UserIdentity{name: 'Wanda', surname: 'Maximoff', email: 'spokesperson09@acme.com'}",spokesperson9,spokesperson9
+user-account-spokesperson-10,true,"UserIdentity{name: 'Vision', surname: 'Jarvis', email: 'spokesperson10@acme.com'}",spokesperson10,spokesperson10
+user-account-spokesperson-11,true,"UserIdentity{name: 'Scott', surname: 'Lang', email: 'spokesperson11@acme.com'}",spokesperson11,spokesperson11
+user-account-spokesperson-12,true,"UserIdentity{name: 'Hope', surname: 'Van Dyne', email: 'spokesperson12@acme.com'}",spokesperson12,spokesperson12
+user-account-spokesperson-13,true,"UserIdentity{name: 'Carol', surname: 'Danvers', email: 'spokesperson13@acme.com'}",spokesperson13,spokesperson13
+user-account-spokesperson-14,true,"UserIdentity{name: 'Bucky', surname: 'Barnes', email: 'spokesperson14@acme.com'}",spokesperson14,spokesperson14
+user-account-spokesperson-15,true,"UserIdentity{name: 'Sam', surname: 'Wilson', email: 'spokesperson15@acme.com'}",spokesperson15,spokesperson15
+user-account-spokesperson-16,true,"UserIdentity{name: 'Peter', surname: 'Quill', email: 'spokesperson16@acme.com'}",spokesperson16,spokesperson16
+user-account-spokesperson-17,true,"UserIdentity{name: 'Gamora', surname: 'Zen-Whoberis', email: 'spokesperson17@acme.com'}",spokesperson17,spokesperson17
+user-account-spokesperson-18,true,"UserIdentity{name: 'Drax', surname: 'Destroyer', email: 'spokesperson18@acme.com'}",spokesperson18,spokesperson18
+user-account-spokesperson-19,true,"UserIdentity{name: 'Rocket', surname: 'Raccoon', email: 'spokesperson19@acme.com'}",spokesperson19,spokesperson19
+user-account-spokesperson-20,true,"UserIdentity{name: 'Groot', surname: 'Tree', email: 'spokesperson20@acme.com'}",spokesperson20,spokesperson20
+user-account-spokesperson-21,true,"UserIdentity{name: 'Mantis', surname: 'Celestial', email: 'spokesperson21@acme.com'}",spokesperson21,spokesperson21
+user-account-spokesperson-22,true,"UserIdentity{name: 'Nebula', surname: 'Thanos', email: 'spokesperson22@acme.com'}",spokesperson22,spokesperson22
+user-account-spokesperson-23,true,"UserIdentity{name: 'Loki', surname: 'Laufeyson', email: 'spokesperson23@acme.com'}",spokesperson23,spokesperson23
