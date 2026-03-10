@@ -1,0 +1,5 @@
+key,enabled,identity,password,username
+user-account-sponsor-00,true,"UserIdentity{name: 'Lucius', surname: 'Malfoy', email: 'lucius@acme.com'}",sponsor0,sponsor0
+user-account-sponsor-01,true,"UserIdentity{name: 'Draco', surname: 'Malfoy', email: 'draco@acme.com'}",sponsor1,""
+user-account-sponsor-02,true,"UserIdentity{name: 'Harry', surname: '波特', email: 'harry@acme.com'}","",sponsor2
+user-account-sponsor-03,true,"UserIdentity{name: 'Ron', surname: 'ويزلي', email: 'ron@acme.com'}",sponsor3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem"
