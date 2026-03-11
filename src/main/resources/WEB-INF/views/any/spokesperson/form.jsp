@@ -17,6 +17,7 @@
 
 <acme:form>
 	<acme:form-textbox code="any.spokesperson.form.label.identity.fullName" path="identity.fullName"/>
+	<acme:form-textbox code="any.spokesperson.form.label.identity.email" path="identity.email"/>
 	<acme:form-textbox code="any.spokesperson.form.label.cv" path="cv"/>
 	<acme:form-textbox code="any.spokesperson.form.label.achievements" path="achievements"/>
 	<acme:form-checkbox code="any.spokesperson.form.label.licensed" path="licensed"/>

@@ -12,17 +12,13 @@
 
 package acme.features.any.campaign;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
 import acme.client.components.principals.Any;
-import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.campaigns.Campaign;
-import acme.realms.Spokesperson;
 
 @Service
 public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
@@ -56,18 +52,12 @@ public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
 
 	@Override
 	public void unbind() {
-		Collection<Spokesperson> spokespersons;
-		SelectChoices choices;
 		Tuple tuple;
 
-		spokespersons = this.repository.findAllSpokespersons();
-		choices = SelectChoices.from(spokespersons, "identity.fullName", this.campaign.getSpokesperson());
-
-		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "monthsActive", "effort");
+		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "spokesperson.identity.fullName");
 		tuple.put("spokespersonId", this.campaign.getSpokesperson().getId());
-
-		tuple.put("spokesperson", choices.getSelected().getKey());
-		tuple.put("spokespersons", choices);
+		tuple.put("monthsActive", this.campaign.getMonthsActive());
+		tuple.put("effort", this.campaign.getEffort());
 	}
 
 }

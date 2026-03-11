@@ -11,6 +11,7 @@
 any.spokesperson.form.title = Spokesperson
 
 any.spokesperson.form.label.identity.fullName = Full Name:
+any.spokesperson.form.label.identity.email = Email:
 any.spokesperson.form.label.cv = CV:
 any.spokesperson.form.label.achievements = Achievements:
-any.spokesperson.form.label.licensed = Licensed:
+any.spokesperson.form.label.licensed = Licensed
