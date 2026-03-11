@@ -12,6 +12,12 @@
 
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
+master.menu.anonymous.list-audit-reports = Informes de Auditoría
+master.menu.anonymous.list-campaigns = Campañas
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Autenticado
 
 # master.menu.administrator ###################################################
 
@@ -30,6 +36,16 @@ master.menu.provider.favourite-link = Enlace favorito
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
+
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list-my-audit-reports= Lista mis informes de autoría
+
+# master.menu.spokesperson ####################################################
+
+master.menu.spokesperson = Portavoz
+master.menu.spokesperson.list-my-campaigns = Lista mis campañas
 
 # master.menu.user-account ####################################################
 

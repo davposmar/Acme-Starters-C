@@ -1,0 +1,21 @@
+﻿key,name,notes,hours,kind,key:audit-report
+# base entity,"","","",""
+section-00,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",250,PRELIMINARY,report-00
+# name - standard variations,"","","","","",""
+section-01,"","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",250,PRELIMINARY,report-00
+section-02,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",250,PRELIMINARY,report-00
+# name - no singular values,"","",""
+# notes - standard variations,""
+section-03,"Lorem ipsum dolor sit amet, consectetur adipiscing","",250,PRELIMINARY,report-00
+section-04,"Lorem ipsum dolor sit amet, consectetur adipiscing","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",250,PRELIMINARY,report-00
+# notes - no singular values
+# hours - standard variations,""
+section-05,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","",PRELIMINARY,report-00
+section-06,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",-1,PRELIMINARY,report-00
+# hours - no singular values,"",""
+# kind - standard variations,"",""
+section-07,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",250,"",report-00
+# kind - no singular values
+# audit-report - no standard variations
+section-08,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",250,"",""
+# audit-report - no singular values
