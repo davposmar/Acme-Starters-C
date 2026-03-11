@@ -16,9 +16,9 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form>
-	<acme:form-textbox code="any.milestone.form.label.campaign" path="campaign.name"/>
-	<acme:form-textbox code="any.milestone.form.label.title" path="title"/>
-	<acme:form-textarea code="any.milestone.form.label.achievements" path="achievements"/>
-	<acme:form-double code="any.milestone.form.label.effort" path="effort"/>
-	<acme:form-select code="any.milestone.form.label.kind" path="kind" choices="${kinds}"/>
+	<acme:form-textbox code="any.spokesperson.form.label.identity.fullName" path="identity.fullName"/>
+	<acme:form-textbox code="any.spokesperson.form.label.identity.email" path="identity.email"/>
+	<acme:form-textbox code="any.spokesperson.form.label.cv" path="cv"/>
+	<acme:form-textbox code="any.spokesperson.form.label.achievements" path="achievements"/>
+	<acme:form-checkbox code="any.spokesperson.form.label.licensed" path="licensed"/>
 </acme:form>

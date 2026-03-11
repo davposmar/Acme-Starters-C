@@ -8,15 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.milestone.form.title = Milestone form
-any.milestone.list.title = Listing of milestones
+any.spokesperson.form.title = Spokesperson
 
-any.milestone.form.label.campaign = Campaign name:
-any.milestone.form.label.title = Title:
-any.milestone.form.label.achievements = Achievements:
-any.milestone.form.label.effort = Effort:
-any.milestone.form.label.kind = Kind:
-
-any.milestone.list.label.title = Title
-any.milestone.list.label.kind = Kind
-any.milestone.list.label.effort = Effort
+any.spokesperson.form.label.identity.fullName = Full Name:
+any.spokesperson.form.label.identity.email = Email:
+any.spokesperson.form.label.cv = CV:
+any.spokesperson.form.label.achievements = Achievements:
+any.spokesperson.form.label.licensed = Licensed

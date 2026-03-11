@@ -1,4 +1,4 @@
-# messages-en.i18n
+# messages-es.i18n
 #
 # Copyright (C) 2012-2026 Rafael Corchuelo.
 #
@@ -8,15 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.milestone.form.title = Milestone form
-any.milestone.list.title = Listing of milestones
+any.spokesperson.form.title = Portavoz
 
-any.milestone.form.label.campaign = Campaign name:
-any.milestone.form.label.title = Title:
-any.milestone.form.label.achievements = Achievements:
-any.milestone.form.label.effort = Effort:
-any.milestone.form.label.kind = Kind:
-
-any.milestone.list.label.title = Title
-any.milestone.list.label.kind = Kind
-any.milestone.list.label.effort = Effort
+any.spokesperson.form.label.identity.fullName = Nombre Completo:
+any.spokesperson.form.label.identity.email = Correo electrónico:
+any.spokesperson.form.label.cv = CV:
+any.spokesperson.form.label.achievements = Logros:
+any.spokesperson.form.label.licensed = Licenciado

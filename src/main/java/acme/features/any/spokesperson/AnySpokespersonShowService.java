@@ -1,5 +1,5 @@
 /*
- * AnyMilestoneListService.java
+ * AnySpokespersonShowService.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -10,54 +10,48 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.any.milestone;
-
-import java.util.Collection;
+package acme.features.any.spokesperson;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
-import acme.entities.campaigns.Campaign;
-import acme.entities.campaigns.Milestone;
+import acme.realms.Spokesperson;
 
 @Service
-public class AnyMilestoneListService extends AbstractService<Any, Milestone> {
+public class AnySpokespersonShowService extends AbstractService<Any, Spokesperson> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AnyMilestoneRepository	repository;
+	private AnySpokespersonRepository	repository;
 
-	private Campaign				campaign;
-	private Collection<Milestone>	milestones;
+	private Spokesperson				spokesperson;
 
 	// AbstractService interface ----------------------------------------------
 
 
 	@Override
 	public void load() {
-		int campaignId;
+		int id;
 
-		campaignId = super.getRequest().getData("campaignId", int.class);
-		this.campaign = this.repository.findCampaignById(campaignId);
-		this.milestones = this.repository.findMilestonesByCampaignId(campaignId);
+		id = super.getRequest().getData("id", int.class);
+		this.spokesperson = this.repository.findSpokespersonById(id);
 	}
 
 	@Override
 	public void authorise() {
 		boolean status;
 
-		status = this.campaign != null && !this.campaign.getDraftMode();
+		status = this.spokesperson != null;
 
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.milestones, //
-			"title", "achievements", "effort", "kind");
+		super.unbindObject(this.spokesperson, "identity.fullName", "cv", "achievements", "licensed", "identity.email");
 	}
 
 }

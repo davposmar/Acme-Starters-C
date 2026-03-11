@@ -17,12 +17,15 @@
 
 <acme:form>
 	<acme:form-textbox code="any.campaign.form.label.ticker" path="ticker"/>
-	<acme:form-select code="any.campaign.form.label.spokesperson" path="spokesperson" choices="${spokespersons}"/>
 	<acme:form-textbox code="any.campaign.form.label.name" path="name"/>
 	<acme:form-textarea code="any.campaign.form.label.description" path="description"/>
 	<acme:form-moment code="any.campaign.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment code="any.campaign.form.label.endMoment" path="endMoment"/>
 	<acme:form-url code="any.campaign.form.label.moreInfo" path="moreInfo"/>
+	<acme:form-double code="any.campaign.form.label.monthsActive" path="monthsActive"/>
+	<acme:form-double code="any.campaign.form.label.effort" path="effort"/>
+	<acme:form-textbox code="any.campaign.form.label.spokesperson" path="spokesperson.identity.fullName"/>
 
 	<acme:button code="any.campaign.form.button.milestones" action="/any/milestone/list?campaignId=${id}"/>
+	<acme:button code="any.campaign.form.button.spokesperson" action="/any/spokesperson/show?id=${spokespersonId}"/>
 </acme:form>
