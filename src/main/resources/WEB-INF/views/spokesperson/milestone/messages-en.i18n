@@ -1,0 +1,13 @@
+
+spokesperson.milestone.form.title = Milestone form
+spokesperson.milestone.list.title = Listing of milestones
+
+spokesperson.milestone.form.label.campaign = Campaign name:
+spokesperson.milestone.form.label.title = Title:
+spokesperson.milestone.form.label.achievements = Achievements:
+spokesperson.milestone.form.label.effort = Effort:
+spokesperson.milestone.form.label.kind = Kind:
+
+spokesperson.milestone.list.label.title = Title
+spokesperson.milestone.list.label.kind = Kind
+spokesperson.milestone.list.label.effort = Effort
