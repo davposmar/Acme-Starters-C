@@ -21,11 +21,13 @@
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.list-audit-reports" action="/any/audit-report/list" />
 			<acme:menu-suboption code="master.menu.anonymous.list-campaigns" action="/any/campaign/list" />
+			<acme:menu-suboption code="master.menu.anonymous.list-sponsorships" action="/any/sponsorship/list" />
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.anonymous.list-audit-reports" action="/any/audit-report/list" />
       		<acme:menu-suboption code="master.menu.anonymous.list-campaigns" action="/any/campaign/list" />
+      		<acme:menu-suboption code="master.menu.anonymous.list-sponsorships" action="/any/sponsorship/list" />      		
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
@@ -51,6 +53,10 @@
 
 		<acme:menu-option code="master.menu.spokesperson" access="hasRealm('Spokesperson')">
 			<acme:menu-suboption code="master.menu.spokesperson.list-my-campaigns" action="/spokesperson/campaign/list" />
+		</acme:menu-option>
+
+		<acme:menu-option code="master.menu.sponsor" access="hasRealm('Sponsor')">
+			<acme:menu-suboption code="master.menu.sponsor.list-my-sponsorships" action="/sponsor/sponsorship/list" />
 		</acme:menu-option>
 		
 	</acme:menu-left>
