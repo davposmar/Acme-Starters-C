@@ -51,7 +51,7 @@ public class AnySponsorShowService extends AbstractService<Any, Sponsor> {
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.sponsor, "address", "im", "gold");
+		super.unbindObject(this.sponsor, "address", "im", "gold", "identity.fullName", "identity.email");
 	}
 
 }

@@ -1,5 +1,5 @@
 /*
- * AnySponsorshipShowService.java
+ * SponsorSponsorshipShowService.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -56,7 +56,7 @@ public class AnySponsorshipShowService extends AbstractService<Any, Sponsorship>
 
 		tuple = super.unbindObject(this.sponsorship, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "sponsor.identity.fullName");
 		tuple.put("monthsActive", this.sponsorship.getMonthsActive());
-		tuple.put("hours", this.sponsorship.getTotalMoney());
+		tuple.put("totalMoney", this.sponsorship.getTotalMoney());
 		tuple.put("sponsorId", this.sponsorship.getSponsor().getId());
 	}
 

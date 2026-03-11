@@ -14,6 +14,7 @@ master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.list-audit-reports = Audit Reports
 master.menu.anonymous.list-campaigns = Campaigns
+master.menu.anonymous.list-sponsorships = Sponsorships
 
 # master.menu.authenticated #######################################################
 

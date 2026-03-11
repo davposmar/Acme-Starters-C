@@ -21,6 +21,7 @@
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.list-audit-reports" action="/any/audit-report/list" />
 			<acme:menu-suboption code="master.menu.anonymous.list-campaigns" action="/any/campaign/list" />
+			<acme:menu-suboption code="master.menu.anonymous.list-sponsorships" action="/any/sponsorship/list" />
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
