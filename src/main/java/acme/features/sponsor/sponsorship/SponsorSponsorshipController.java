@@ -17,12 +17,12 @@ import javax.annotation.PostConstruct;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 
-import acme.client.components.principals.Any;
 import acme.client.controllers.AbstractController;
 import acme.entities.sponsorships.Sponsorship;
+import acme.realms.Sponsor;
 
 @Controller
-public class SponsorSponsorshipController extends AbstractController<Any, Sponsorship> {
+public class SponsorSponsorshipController extends AbstractController<Sponsor, Sponsorship> {
 
 	// Constructors -----------------------------------------------------------
 

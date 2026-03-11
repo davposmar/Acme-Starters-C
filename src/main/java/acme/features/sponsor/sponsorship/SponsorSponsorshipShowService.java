@@ -16,12 +16,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
-import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.entities.sponsorships.Sponsorship;
+import acme.realms.Sponsor;
 
 @Service
-public class SponsorSponsorshipShowService extends AbstractService<Any, Sponsorship> {
+public class SponsorSponsorshipShowService extends AbstractService<Sponsor, Sponsorship> {
 
 	// Internal state ---------------------------------------------------------
 

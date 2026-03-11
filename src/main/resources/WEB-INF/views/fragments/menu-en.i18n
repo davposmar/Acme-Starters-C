@@ -48,6 +48,11 @@ master.menu.auditor.list-my-audit-reports= List my audit reports
 master.menu.spokesperson = Spokesperson
 master.menu.spokesperson.list-my-campaigns = List my campaigns
 
+# master.menu.sponsor ####################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.list-my-sponsorships = List my sponsorships
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
