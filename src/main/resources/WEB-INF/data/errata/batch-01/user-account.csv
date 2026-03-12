@@ -1,0 +1,5 @@
+key,enabled,identity,password,username
+user-account-fundraiser-00,true,"UserIdentity{name: 'Stephen', surname: 'Curry', email: 'fundraiser00@acme.com'}",fundraiser0,fundraiser0
+user-account-fundraiser-01,true,"UserIdentity{name: 'Lebron', surname: 'James', email: 'fundraiser01@acme.com'}","fundraiser1",""
+user-account-fundraiser-02,true,"UserIdentity{name: 'James', surname: 'Harden', email: 'fundraiser02@acme.com'}","",fundraiser2
+user-account-fundraiser-03,true,"UserIdentity{name: 'Kevin', surname: 'Durant', email: 'fundraiser03@acme.com'}",fundraiser3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem"
