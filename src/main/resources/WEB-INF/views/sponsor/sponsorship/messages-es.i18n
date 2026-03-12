@@ -13,10 +13,16 @@ sponsor.sponsorship.form.label.monthsActive = Meses Activo: (Calculated)
 sponsor.sponsorship.form.label.totalMoney = Dinero total: (Calculated)
 
 sponsor.sponsorship.form.button.donations = Donaciones
+sponsor.sponsorship.form.button.update = Actualizar
+sponsor.sponsorship.form.button.delete = Borrar
+sponsor.sponsorship.form.button.publish = Publicar
+sponsor.sponsorship.form.button.create = Crear
 
 sponsor.sponsorship.list.label.ticker = Referencia 
 sponsor.sponsorship.list.label.name = Nombre
 sponsor.sponsorship.list.label.startMoment = Fecha de inicio
 sponsor.sponsorship.list.label.endMoment = Fecha de fin
 sponsor.sponsorship.list.label.sponsor.identity.fullName = Espónsor
+
+sponsor.sponsorship.list.button.create = Crear
 

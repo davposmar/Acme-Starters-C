@@ -11,3 +11,5 @@
 acme.validation.sponsorship.duplicated-ticker.message = The ticker is duplicated.
 acme.validation.sponsorship.minimun-donations.message = It must have at least one Donation before it can be published.
 acme.validation.sponsorship.moments.message = Start moment must be before end moment.
+acme.validation.sponsorship.moments.start.future.message = Start moment must be future.
+acme.validation.sponsorship.moments.end.future.message = End moment must be future.

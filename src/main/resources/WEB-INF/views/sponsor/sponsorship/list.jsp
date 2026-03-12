@@ -11,3 +11,5 @@
 	<acme:list-column code="sponsor.sponsorship.list.label.sponsor.identity.fullName" path="sponsor.identity.fullName" width="20%"/>
 	<acme:list-hidden path="description"/>
 </acme:list>
+
+<acme:button code="sponsor.sponsorship.list.button.create" action="/sponsor/sponsorship/create"/>
