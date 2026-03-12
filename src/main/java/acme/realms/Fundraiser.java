@@ -7,6 +7,8 @@ import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.validation.Mandatory;
+import acme.constraints.ValidHeader;
+import acme.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,19 +17,25 @@ import lombok.Setter;
 @Setter
 public class Fundraiser extends AbstractRole {
 
-	@Mandatory
-	// TODO: @ValidHeader
-	@Column
-	private String	bank;
+	// Serialisation version --------------------------------------------------
+
+	private static final long	serialVersionUID	= 1L;
+
+	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	// TODO: @ValidText
+	@ValidHeader
 	@Column
-	private String	statement;
+	private String				bank;
+
+	@Mandatory
+	@ValidText
+	@Column
+	private String				statement;
 
 	@Mandatory
 	@Valid
 	@Column
-	private Boolean	agent;
+	private Boolean				agent;
 
 }

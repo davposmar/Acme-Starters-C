@@ -12,6 +12,8 @@ import javax.validation.Valid;
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidScore;
+import acme.constraints.ValidHeader;
+import acme.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,28 +22,34 @@ import lombok.Setter;
 @Setter
 public class Tactic extends AbstractEntity {
 
-	@Mandatory
-	// TODO: @ValidHeader
-	@Column
-	private String		name;
+	// Serialisation version -----------------------------------------
+
+	private static final long	serialVersionUID	= 1L;
+
+	// Attributes ----------------------------------------------------
 
 	@Mandatory
-	// TODO: @ValidText
-	private String		notes;
+	@ValidHeader
+	@Column
+	private String				name;
+
+	@Mandatory
+	@ValidText
+	private String				notes;
 
 	@Mandatory
 	@ValidScore
 	@Column
-	private Double		expectedPercentage;
+	private Double				expectedPercentage;
 
 	@Mandatory
 	@Valid
 	@Column
 	@Enumerated(EnumType.STRING)
-	private TacticKind	kind;
+	private TacticKind			kind;
 
 	@ManyToOne
 	@JoinColumn(name = "strategy_id", nullable = false)
-	private Strategy	strategy;
+	private Strategy			strategy;
 
 }

@@ -13,11 +13,18 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
+import acme.client.components.validation.ValidScore;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidHeader;
+import acme.constraints.ValidStrategy;
+import acme.constraints.ValidText;
+import acme.constraints.ValidTicker;
 import acme.realms.Fundraiser;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,22 +32,27 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidStrategy
 public class Strategy extends AbstractEntity {
+
+	// Serialisation version -----------------------------------------
 
 	private static final long	serialVersionUID	= 1L;
 
+	// Attributes ----------------------------------------------------
+
 	@Mandatory
-	// TODO: @ValidTicker
+	@ValidTicker
 	@Column(unique = true)
 	private String				ticker;
 
 	@Mandatory
-	// TODO: @ValidHeader
+	@ValidHeader
 	@Column(unique = true)
 	private String				name;
 
 	@Mandatory
-	// TODO: @ValidText
+	@ValidText
 	private String				description;
 
 	@Mandatory
@@ -66,6 +78,14 @@ public class Strategy extends AbstractEntity {
 	@JoinColumn(name = "fundraiser_id")
 	private Fundraiser			fundraiser;
 
+	// Derived attributes --------------------------------------------
+
+	@Mandatory
+	@Valid
+	@Transient
+	@Autowired
+	private StrategyRepository	strategyRepository;
+
 
 	@Transient
 	public Double getMonthsActive() {
@@ -74,6 +94,14 @@ public class Strategy extends AbstractEntity {
 		long days = ChronoUnit.DAYS.between(this.startMoment.toInstant(), this.endMoment.toInstant());
 		double months = days / 30.436875;
 		return Math.round(months * 10.0) / 10.0;
+	}
+
+	@Mandatory
+	@ValidScore
+	@Transient
+	public Double getExpectedPercentage() {
+		Double total = this.strategyRepository.expectedPercentage(this.getId());
+		return total == null ? 0 : total;
 	}
 
 }
