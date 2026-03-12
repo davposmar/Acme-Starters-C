@@ -11,7 +11,7 @@
 any.milestone.form.title = Detalles de hito
 any.milestone.list.title = Lista de hitos
 
-any.milestone.form.label.campaign = Campaña:
+any.milestone.form.label.campaign = Nombre de campaña:
 any.milestone.form.label.title = Título:
 any.milestone.form.label.achievements = Logros:
 any.milestone.form.label.effort = Esfuerzo:

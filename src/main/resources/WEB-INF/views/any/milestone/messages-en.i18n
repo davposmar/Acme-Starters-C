@@ -11,7 +11,7 @@
 any.milestone.form.title = Milestone form
 any.milestone.list.title = Listing of milestones
 
-any.milestone.form.label.campaign = Campaign:
+any.milestone.form.label.campaign = Campaign name:
 any.milestone.form.label.title = Title:
 any.milestone.form.label.achievements = Achievements:
 any.milestone.form.label.effort = Effort:

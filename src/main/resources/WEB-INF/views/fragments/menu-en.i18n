@@ -14,6 +14,7 @@ master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.list-audit-reports = Audit Reports
 master.menu.anonymous.list-campaigns = Campaigns
+master.menu.anonymous.list-sponsorships = Sponsorships
 
 # master.menu.authenticated #######################################################
 
@@ -41,6 +42,16 @@ master.menu.consumer.favourite-link = Favourite link
 
 master.menu.auditor = Auditor
 master.menu.auditor.list-my-audit-reports= List my audit reports
+
+# master.menu.spokesperson ####################################################
+
+master.menu.spokesperson = Spokesperson
+master.menu.spokesperson.list-my-campaigns = List my campaigns
+
+# master.menu.sponsor ####################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.list-my-sponsorships = List my sponsorships
 
 # master.menu.user-account ####################################################
 
