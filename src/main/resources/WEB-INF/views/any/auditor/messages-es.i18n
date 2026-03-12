@@ -13,5 +13,5 @@ any.auditor.form.title = Auditor
 any.auditor.form.label.identity.fullName = Nombre Completo:
 any.auditor.form.label.firm = Empresa:
 any.auditor.form.label.highlights = Destacados:
-any.auditor.form.label.solicitor = Solicitante:
+any.auditor.form.label.solicitor = Solicitante
 any.auditor.form.label.identity.email = Correo electrónico:

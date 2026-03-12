@@ -59,9 +59,8 @@ public class AnyMilestoneShowService extends AbstractService<Any, Milestone> {
 
 		kinds = SelectChoices.from(MilestoneKind.class, this.milestone.getKind());
 
-		tuple = super.unbindObject(this.milestone, "title", "achievements", "effort", "kind");
+		tuple = super.unbindObject(this.milestone, "title", "achievements", "effort", "kind", "campaign.name");
 		tuple.put("kinds", kinds);
-		tuple.put("campaign", this.milestone.getCampaign().getName());
 	}
 
 }

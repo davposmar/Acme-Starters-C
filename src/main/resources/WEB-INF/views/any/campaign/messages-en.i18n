@@ -18,8 +18,11 @@ any.campaign.form.label.description = Description:
 any.campaign.form.label.startMoment = Start moment:
 any.campaign.form.label.endMoment = End moment:
 any.campaign.form.label.moreInfo = More info: (Optional)
+any.campaign.form.label.monthsActive = Months active: (Calculated)
+any.campaign.form.label.effort = Effort: (Calculated)
 
 any.campaign.form.button.milestones = Milestones
+any.campaign.form.button.spokesperson = Spokesperson
 
 any.campaign.list.label.ticker = Ticker
 any.campaign.list.label.name = Name

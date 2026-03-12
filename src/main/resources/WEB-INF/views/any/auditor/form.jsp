@@ -19,6 +19,6 @@
 	<acme:form-textbox code="any.auditor.form.label.identity.fullName" path="identity.fullName"/>
 	<acme:form-textbox code="any.auditor.form.label.firm" path="firm"/>
 	<acme:form-textbox code="any.auditor.form.label.highlights" path="highlights"/>
-	<acme:form-textbox code="any.auditor.form.label.solicitor" path="solicitor"/>
+	<acme:form-checkbox code="any.auditor.form.label.solicitor" path="solicitor"/>
 	<acme:form-textbox code="any.auditor.form.label.identity.email" path="identity.email"/>
 </acme:form>

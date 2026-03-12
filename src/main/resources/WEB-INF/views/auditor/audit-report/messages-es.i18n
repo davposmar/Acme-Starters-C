@@ -1,0 +1,21 @@
+
+auditor.audit-report.form.title = Detalles de informe de auditoría
+auditor.audit-report.list.title = Lista de informes de auditoría
+
+auditor.audit-report.form.label.ticker = Referencia:
+auditor.audit-report.form.label.name = Nombre:
+auditor.audit-report.form.label.description = Descripción:
+auditor.audit-report.form.label.startMoment = Fecha de comienzo:
+auditor.audit-report.form.label.endMoment = Fecha de fin:
+auditor.audit-report.form.label.moreInfo = Más información: (Opcional)
+auditor.audit-report.form.label.auditor.identity.fullName = Auditor:
+auditor.audit-report.form.label.monthsActive = Meses Activo: (Calculado)
+auditor.audit-report.form.label.hours = Horas: (Calculado)
+
+auditor.audit-report.form.button.audit-sections = Secciones de Auditoría
+
+auditor.audit-report.list.label.ticker = Referencia 
+auditor.audit-report.list.label.name = Nombre
+auditor.audit-report.list.label.startMoment = Fecha de comienzo
+auditor.audit-report.list.label.endMoment = Fecha de Fin
+auditor.audit-report.list.label.auditor.identity.fullName = Auditor
