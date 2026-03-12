@@ -13,9 +13,15 @@ auditor.audit-report.form.label.monthsActive = Meses Activo: (Calculado)
 auditor.audit-report.form.label.hours = Horas: (Calculado)
 
 auditor.audit-report.form.button.audit-sections = Secciones de Auditoría
+auditor.audit-report.form.button.update = Actualizar
+auditor.audit-report.form.button.delete = Borrar
+auditor.audit-report.form.button.publish = Publicar
+auditor.audit-report.form.button.create = Crear
 
 auditor.audit-report.list.label.ticker = Referencia 
 auditor.audit-report.list.label.name = Nombre
 auditor.audit-report.list.label.startMoment = Fecha de comienzo
 auditor.audit-report.list.label.endMoment = Fecha de Fin
 auditor.audit-report.list.label.auditor.identity.fullName = Auditor
+
+auditor.audit-report.list.button.create = Crear

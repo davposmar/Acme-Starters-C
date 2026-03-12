@@ -32,6 +32,7 @@ public class AuditorAuditReportController extends AbstractController<Auditor, Au
 
 		super.addBasicCommand("list", AuditorAuditReportListService.class);
 		super.addBasicCommand("show", AuditorAuditReportShowService.class);
+		super.addBasicCommand("create", AuditorAuditReportCreateService.class);
 	}
 
 }
