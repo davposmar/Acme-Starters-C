@@ -21,7 +21,7 @@ import acme.entities.audits.AuditReport;
 import acme.realms.Auditor;
 
 @Service
-public class AuditorAuditReportShowService extends AbstractService<Auditor, AuditReport> {
+public class AuditorAuditReportCreateService extends AbstractService<Auditor, AuditReport> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -35,19 +35,37 @@ public class AuditorAuditReportShowService extends AbstractService<Auditor, Audi
 
 	@Override
 	public void load() {
-		int id;
+		Auditor auditor;
 
-		id = super.getRequest().getData("id", int.class);
-		this.auditReport = this.repository.findAuditReportById(id);
+		auditor = (Auditor) super.getRequest().getPrincipal().getActiveRealm();
+
+		this.auditReport = super.newObject(AuditReport.class);
+		this.auditReport.setDraftMode(true);
+		this.auditReport.setAuditor(auditor);
 	}
 
 	@Override
 	public void authorise() {
 		boolean status;
 
-		status = this.auditReport != null && (this.auditReport.getAuditor().isPrincipal() || !this.auditReport.getDraftMode());
+		status = true;
 
 		super.setAuthorised(status);
+	}
+
+	@Override
+	public void bind() {
+		super.bindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+	}
+
+	@Override
+	public void validate() {
+		super.validateObject(this.auditReport);
+	}
+
+	@Override
+	public void execute() {
+		this.repository.save(this.auditReport);
 	}
 
 	@Override

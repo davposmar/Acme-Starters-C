@@ -1,5 +1,5 @@
 /*
- * AuditorAuditSectionShowService.java
+ * AnyAuditorShowService.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -10,27 +10,25 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.auditor.auditSection;
+package acme.features.auditor.auditReport;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
-import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
-import acme.entities.audits.AuditSection;
-import acme.entities.audits.SectionKind;
+import acme.entities.audits.AuditReport;
 import acme.realms.Auditor;
 
 @Service
-public class AuditorAuditSectionShowService extends AbstractService<Auditor, AuditSection> {
+public class AuditorAuditReportUpdateService extends AbstractService<Auditor, AuditReport> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuditorAuditSectionRepository	repository;
+	private AuditorAuditReportRepository	repository;
 
-	private AuditSection					auditSection;
+	private AuditReport						auditReport;
 
 	// AbstractService interface -------------------------------------------
 
@@ -40,29 +38,40 @@ public class AuditorAuditSectionShowService extends AbstractService<Auditor, Aud
 		int id;
 
 		id = super.getRequest().getData("id", int.class);
-		this.auditSection = this.repository.findAuditSectionById(id);
+		this.auditReport = this.repository.findAuditReportById(id);
 	}
 
 	@Override
 	public void authorise() {
 		boolean status;
 
-		status = this.auditSection != null && (this.auditSection.getAuditReport().getAuditor().isPrincipal() || !this.auditSection.getAuditReport().getDraftMode());
+		status = this.auditReport != null && this.auditReport.getDraftMode() && this.auditReport.getAuditor().isPrincipal();
 
 		super.setAuthorised(status);
 	}
 
 	@Override
-	public void unbind() {
+	public void bind() {
+		super.bindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+	}
 
-		SelectChoices choices;
+	@Override
+	public void validate() {
+		super.validateObject(this.auditReport);
+	}
+
+	@Override
+	public void execute() {
+		this.repository.save(this.auditReport);
+	}
+
+	@Override
+	public void unbind() {
 		Tuple tuple;
 
-		choices = SelectChoices.from(SectionKind.class, this.auditSection.getKind());
-
-		tuple = super.unbindObject(this.auditSection, "name", "notes", "hours", "kind");
-		tuple.put("kinds", choices);
-		tuple.put("draftMode", this.auditSection.getAuditReport().getDraftMode());
+		tuple = super.unbindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "auditor.identity.fullName");
+		tuple.put("monthsActive", this.auditReport.getMonthsActive());
+		tuple.put("hours", this.auditReport.getHours());
 	}
 
 }

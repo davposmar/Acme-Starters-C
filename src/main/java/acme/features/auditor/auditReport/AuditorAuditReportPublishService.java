@@ -12,16 +12,19 @@
 
 package acme.features.auditor.auditReport;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.audits.AuditReport;
 import acme.realms.Auditor;
 
 @Service
-public class AuditorAuditReportShowService extends AbstractService<Auditor, AuditReport> {
+public class AuditorAuditReportPublishService extends AbstractService<Auditor, AuditReport> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -45,9 +48,51 @@ public class AuditorAuditReportShowService extends AbstractService<Auditor, Audi
 	public void authorise() {
 		boolean status;
 
-		status = this.auditReport != null && (this.auditReport.getAuditor().isPrincipal() || !this.auditReport.getDraftMode());
+		status = this.auditReport != null && this.auditReport.getDraftMode() && this.auditReport.getAuditor().isPrincipal();
 
 		super.setAuthorised(status);
+	}
+
+	@Override
+	public void bind() {
+		super.bindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+	}
+
+	@Override
+	public void validate() {
+		super.validateObject(this.auditReport);
+
+		{
+			Date startMoment = this.auditReport.getStartMoment();
+			Date endMoment = this.auditReport.getEndMoment();
+			boolean isValidInterval;
+			boolean isStartFuture;
+			boolean isEndFuture;
+
+			if (startMoment != null && endMoment != null) {
+				isStartFuture = MomentHelper.isFuture(startMoment);
+				isEndFuture = MomentHelper.isFuture(endMoment);
+				isValidInterval = MomentHelper.isAfter(endMoment, startMoment);
+				super.state(isValidInterval, "*", "acme.validation.audit-report.interval.message");
+				super.state(isStartFuture, "startMoment", "acme.validation.audit-report.startMoment.message");
+				super.state(isEndFuture, "endMoment", "acme.validation.audit-report.endMoment.message");
+			}
+		}
+		{
+			boolean correctMinimunSections;
+			Integer id = this.auditReport.getId();
+			if (id != null) {
+				correctMinimunSections = this.repository.findCountAuditReportsByAuditReportId(id) >= 1;
+
+				super.state(correctMinimunSections, "*", "acme.validation.audit-report.minimun-sections.message");
+			}
+		}
+	}
+
+	@Override
+	public void execute() {
+		this.auditReport.setDraftMode(false);
+		this.repository.save(this.auditReport);
 	}
 
 	@Override

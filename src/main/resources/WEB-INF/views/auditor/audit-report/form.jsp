@@ -10,9 +10,24 @@
 	<acme:form-moment code="auditor.audit-report.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment code="auditor.audit-report.form.label.endMoment" path="endMoment"/>
 	<acme:form-url code="auditor.audit-report.form.label.moreInfo" path="moreInfo"/>
-	<acme:form-textbox code="auditor.audit-report.form.label.auditor.identity.fullName" path="auditor.identity.fullName"/>
-	<acme:form-double code="auditor.audit-report.form.label.monthsActive" path="monthsActive"/>
-	<acme:form-double code="auditor.audit-report.form.label.hours" path="hours"/>
 	
-	<acme:button code="auditor.audit-report.form.button.audit-sections" action="/auditor/audit-section/list?auditReportId=${id}"/>
+	<jstl:choose>	 
+		<jstl:when test="${_command == 'show' && draftMode == false}">
+			<acme:form-double code="auditor.audit-report.form.label.monthsActive" path="monthsActive"/>
+			<acme:form-double code="auditor.audit-report.form.label.hours" path="hours"/>
+			<acme:form-textbox code="auditor.audit-report.form.label.auditor.identity.fullName" path="auditor.identity.fullName"/>
+			<acme:button code="auditor.audit-report.form.button.audit-sections" action="/auditor/audit-section/list?auditReportId=${id}"/>		
+		</jstl:when>
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
+			<acme:form-double readonly="true" code="auditor.audit-report.form.label.monthsActive" path="monthsActive"/>
+			<acme:form-double readonly="true" code="auditor.audit-report.form.label.hours" path="hours"/>
+			<acme:button code="auditor.audit-report.form.button.audit-sections" action="/auditor/audit-section/list?auditReportId=${id}"/>
+			<acme:submit code="auditor.audit-report.form.button.update" action="/auditor/audit-report/update"/>
+			<acme:submit code="auditor.audit-report.form.button.delete" action="/auditor/audit-report/delete"/>
+			<acme:submit code="auditor.audit-report.form.button.publish" action="/auditor/audit-report/publish"/>
+		</jstl:when>
+		<jstl:when test="${_command == 'create'}">
+			<acme:submit code="auditor.audit-report.form.button.create" action="/auditor/audit-report/create"/>
+		</jstl:when>		
+	</jstl:choose>
 </acme:form>
