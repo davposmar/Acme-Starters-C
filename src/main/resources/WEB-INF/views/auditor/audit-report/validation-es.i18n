@@ -8,6 +8,9 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-acme.validation.audit-report.duplicated-ticker.message = Referencia ya usada.
-acme.validation.audit-report.minimun-sections.message  = Debe tener al menos un AuditSection antes de poder publicarse.
-acme.validation.audit-report.interval.message		   = El momento de inicio debe ser anterior al momento final.
+acme.validation.audit-report.duplicated-ticker.message = Referencia ya usada
+acme.validation.audit-report.minimun-sections.message  = Debe tener al menos un AuditSection antes de poder publicarse
+acme.validation.audit-report.interval.message		   = El momento de inicio debe ser anterior al momento final
+
+acme.validation.audit-report.startMoment.message	   = El momento de inicio debe ser en el futuro
+acme.validation.audit-report.endMoment.message		   = El momento de fin debe ser en el futuro

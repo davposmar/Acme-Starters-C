@@ -1,5 +1,5 @@
 /*
- * AnyAuditorController.java
+ * AuthenticatedAuditorController.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -10,19 +10,19 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.auditor.auditReport;
+package acme.features.authenticated.auditor;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 
+import acme.client.components.principals.Authenticated;
 import acme.client.controllers.AbstractController;
-import acme.entities.audits.AuditReport;
 import acme.realms.Auditor;
 
 @Controller
-public class AuditorAuditReportController extends AbstractController<Auditor, AuditReport> {
+public class AuthenticatedAuditorController extends AbstractController<Authenticated, Auditor> {
 
 	// Constructors -----------------------------------------------------------
 
@@ -30,13 +30,8 @@ public class AuditorAuditReportController extends AbstractController<Auditor, Au
 	protected void initialise() {
 		super.setMediaType(MediaType.TEXT_HTML);
 
-		super.addBasicCommand("list", AuditorAuditReportListService.class);
-		super.addBasicCommand("show", AuditorAuditReportShowService.class);
-		super.addBasicCommand("create", AuditorAuditReportCreateService.class);
-		super.addBasicCommand("update", AuditorAuditReportUpdateService.class);
-		super.addBasicCommand("delete", AuditorAuditReportDeleteService.class);
-
-		super.addCustomCommand("publish", "update", AuditorAuditReportPublishService.class);
+		super.addBasicCommand("create", AuthenticatedAuditorCreateService.class);
+		super.addBasicCommand("update", AuthenticatedAuditorUpdateService.class);
 	}
 
 }

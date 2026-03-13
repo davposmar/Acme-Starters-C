@@ -1,0 +1,8 @@
+authenticated.auditor.form.title = Auditor data
+
+authenticated.auditor.form.label.firm = Empresa:
+authenticated.auditor.form.label.highlights = Destacados:
+authenticated.auditor.form.label.solicitor = Solicitante
+
+authenticated.auditor.form.button.create = Registrar
+authenticated.auditor.form.button.update = Actualizar
