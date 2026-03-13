@@ -1,5 +1,5 @@
 /*
- * SpokespersonCampaignShowService.java
+ * SpokespersonCampaignCreateService.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -21,7 +21,7 @@ import acme.entities.campaigns.Campaign;
 import acme.realms.Spokesperson;
 
 @Service
-public class SpokespersonCampaignShowService extends AbstractService<Spokesperson, Campaign> {
+public class SpokespersonCampaignCreateService extends AbstractService<Spokesperson, Campaign> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -35,19 +35,33 @@ public class SpokespersonCampaignShowService extends AbstractService<Spokesperso
 
 	@Override
 	public void load() {
-		int id;
+		Spokesperson spokesperson;
 
-		id = super.getRequest().getData("id", int.class);
-		this.campaign = this.repository.findCampaignById(id);
+		spokesperson = (Spokesperson) super.getRequest().getPrincipal().getActiveRealm();
+
+		this.campaign = super.newObject(Campaign.class);
+		this.campaign.setDraftMode(true);
+		this.campaign.setSpokesperson(spokesperson);
 	}
 
 	@Override
 	public void authorise() {
-		boolean status;
+		super.setAuthorised(true);
+	}
 
-		status = this.campaign != null && (this.campaign.getSpokesperson().isPrincipal() || !this.campaign.getDraftMode());
+	@Override
+	public void bind() {
+		super.bindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+	}
 
-		super.setAuthorised(status);
+	@Override
+	public void validate() {
+		super.validateObject(this.campaign);
+	}
+
+	@Override
+	public void execute() {
+		this.repository.save(this.campaign);
 	}
 
 	@Override

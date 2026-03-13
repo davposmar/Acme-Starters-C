@@ -11,3 +11,5 @@
 acme.validation.campaign.duplicated-ticker.message = Referencia ya usada
 acme.validation.campaign.milestone.message = La campaña tiene que tener tiene que tener al menos un hito
 acme.validation.campaign.moments.message = El momento de inicio debe ser anterior al momento final
+acme.validation.campaign.startMoment.message = El momento de inicio debe ser futuro
+acme.validation.campaign.endMoment.message = El momento final debe ser futuro

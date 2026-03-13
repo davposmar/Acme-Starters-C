@@ -1,5 +1,5 @@
 /*
- * SpokespersonCampaignShowService.java
+ * SpokespersonCampaignUpdateService.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -21,7 +21,7 @@ import acme.entities.campaigns.Campaign;
 import acme.realms.Spokesperson;
 
 @Service
-public class SpokespersonCampaignShowService extends AbstractService<Spokesperson, Campaign> {
+public class SpokespersonCampaignUpdateService extends AbstractService<Spokesperson, Campaign> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -45,9 +45,23 @@ public class SpokespersonCampaignShowService extends AbstractService<Spokesperso
 	public void authorise() {
 		boolean status;
 
-		status = this.campaign != null && (this.campaign.getSpokesperson().isPrincipal() || !this.campaign.getDraftMode());
-
+		status = this.campaign != null && this.campaign.getDraftMode() && this.campaign.getSpokesperson().isPrincipal();
 		super.setAuthorised(status);
+	}
+
+	@Override
+	public void bind() {
+		super.bindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+	}
+
+	@Override
+	public void validate() {
+		super.validateObject(this.campaign);
+	}
+
+	@Override
+	public void execute() {
+		this.repository.save(this.campaign);
 	}
 
 	@Override
