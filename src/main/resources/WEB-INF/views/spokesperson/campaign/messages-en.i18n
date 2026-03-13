@@ -13,8 +13,13 @@ spokesperson.campaign.form.label.effort = Effort: (Calculated)
 spokesperson.campaign.form.label.spokesperson = Spokesperson:
 
 spokesperson.campaign.form.button.milestones = Milestones
+spokesperson.campaign.form.button.update = Update
+spokesperson.campaign.form.button.delete = Delete
+spokesperson.campaign.form.button.publish = Publish
+spokesperson.campaign.form.button.create = Create
 
 spokesperson.campaign.list.label.ticker = Ticker
 spokesperson.campaign.list.label.name = Name
 spokesperson.campaign.list.label.startMoment = Start moment
 spokesperson.campaign.list.label.endMoment = End moment
+spokesperson.campaign.list.button.create = Create
