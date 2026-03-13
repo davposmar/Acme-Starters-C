@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.employer.form.title = Datos de espónsor
+authenticated.sponsor.form.title = Datos de espónsor
 
 authenticated.sponsor.form.label.address = Dirección: 
 authenticated.sponsor.form.label.im = Im:
