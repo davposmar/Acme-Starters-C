@@ -1,5 +1,5 @@
 /*
- * SpokespersonMilestoneShowService.java
+ * SpokespersonMilestoneDeleteService.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -23,7 +23,7 @@ import acme.entities.campaigns.MilestoneKind;
 import acme.realms.Spokesperson;
 
 @Service
-public class SpokespersonMilestoneShowService extends AbstractService<Spokesperson, Milestone> {
+public class SpokespersonMilestoneDeleteService extends AbstractService<Spokesperson, Milestone> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -47,9 +47,25 @@ public class SpokespersonMilestoneShowService extends AbstractService<Spokespers
 	public void authorise() {
 		boolean status;
 
-		status = this.milestone != null && (this.milestone.getCampaign().getSpokesperson().isPrincipal() || !this.milestone.getCampaign().getDraftMode());
+		status = this.milestone != null && //
+			this.milestone.getCampaign().getDraftMode() && this.milestone.getCampaign().getSpokesperson().isPrincipal();
 
 		super.setAuthorised(status);
+	}
+
+	@Override
+	public void bind() {
+		super.bindObject(this.milestone, "title", "achievements", "effort", "kind");
+	}
+
+	@Override
+	public void validate() {
+		super.validateObject(this.milestone);
+	}
+
+	@Override
+	public void execute() {
+		this.repository.delete(this.milestone);
 	}
 
 	@Override
