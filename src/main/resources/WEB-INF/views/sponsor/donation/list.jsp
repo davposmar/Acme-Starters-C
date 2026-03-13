@@ -9,3 +9,7 @@
 	<acme:list-hidden path="notes"/>
 	<acme:list-hidden path="kind"/>
 </acme:list>
+
+<jstl:if test="${showCreate}">
+	<acme:button code="sponsor.donation.list.button.create" action="/sponsor/donation/create?sponsorshipId=${sponsorshipId}"/>
+</jstl:if>
