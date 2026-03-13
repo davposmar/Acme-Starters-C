@@ -1,5 +1,5 @@
 /*
- * SponsorDonationShowService.java
+ * SponsorDonationCreateService.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -20,10 +20,11 @@ import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.sponsorships.Donation;
 import acme.entities.sponsorships.DonationKind;
+import acme.entities.sponsorships.Sponsorship;
 import acme.realms.Sponsor;
 
 @Service
-public class SponsorDonationShowService extends AbstractService<Sponsor, Donation> {
+public class SponsorDonationCreateService extends AbstractService<Sponsor, Donation> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -37,30 +38,56 @@ public class SponsorDonationShowService extends AbstractService<Sponsor, Donatio
 
 	@Override
 	public void load() {
-		int id;
+		int sponsorshipId;
+		Sponsorship sponsorship;
 
-		id = super.getRequest().getData("id", int.class);
-		this.donation = this.repository.findDonationById(id);
+		sponsorshipId = super.getRequest().getData("sponsorshipId", int.class);
+		sponsorship = this.repository.findSponsorshipById(sponsorshipId);
+
+		this.donation = super.newObject(Donation.class);
+		this.donation.setName("");
+		this.donation.setNotes("");
+		this.donation.setSponsorship(sponsorship);
 	}
 
 	@Override
 	public void authorise() {
 		boolean status;
+		int sponsorshipId;
+		Sponsorship sponsorship;
 
-		status = this.donation != null && (this.donation.getSponsorship().getSponsor().isPrincipal() || !this.donation.getSponsorship().getDraftMode());
+		sponsorshipId = super.getRequest().getData("sponsorshipId", int.class);
+		sponsorship = this.repository.findSponsorshipById(sponsorshipId);
+		status = sponsorship != null && //
+			this.donation.getSponsorship().getDraftMode() && this.donation.getSponsorship().getSponsor().isPrincipal();
 
 		super.setAuthorised(status);
 	}
 
 	@Override
-	public void unbind() {
+	public void bind() {
+		super.bindObject(this.donation, "name", "notes", "money", "kind");
+	}
 
-		SelectChoices choices;
+	@Override
+	public void validate() {
+		super.validateObject(this.donation);
+	}
+
+	@Override
+	public void execute() {
+		this.repository.save(this.donation);
+	}
+
+	@Override
+	public void unbind() {
 		Tuple tuple;
+		SelectChoices choices;
 
 		choices = SelectChoices.from(DonationKind.class, this.donation.getKind());
 
 		tuple = super.unbindObject(this.donation, "name", "notes", "money", "kind");
+		tuple.put("sponsorshipId", super.getRequest().getData("sponsorshipId", int.class));
 		tuple.put("kinds", choices);
 		tuple.put("draftMode", this.donation.getSponsorship().getDraftMode());
 	}
