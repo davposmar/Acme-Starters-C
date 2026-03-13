@@ -9,3 +9,7 @@
 	<acme:list-hidden path="notes"/>
 	<acme:list-hidden path="kind"/>
 </acme:list>
+
+<jstl:if test="${showCreate}">
+	<acme:button code="auditor.audit-section.list.button.create" action="/auditor/audit-section/create?auditReportId=${auditReportId}"/>
+</jstl:if>

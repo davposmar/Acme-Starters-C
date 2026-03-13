@@ -23,7 +23,7 @@ import acme.entities.audits.SectionKind;
 import acme.realms.Auditor;
 
 @Service
-public class AuditorAuditSectionShowService extends AbstractService<Auditor, AuditSection> {
+public class AuditorAuditSectionUpdateService extends AbstractService<Auditor, AuditSection> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -47,9 +47,25 @@ public class AuditorAuditSectionShowService extends AbstractService<Auditor, Aud
 	public void authorise() {
 		boolean status;
 
-		status = this.auditSection != null && (this.auditSection.getAuditReport().getAuditor().isPrincipal() || !this.auditSection.getAuditReport().getDraftMode());
+		status = this.auditSection != null && //
+			this.auditSection.getAuditReport().getDraftMode() && this.auditSection.getAuditReport().getAuditor().isPrincipal();
 
 		super.setAuthorised(status);
+	}
+
+	@Override
+	public void bind() {
+		super.bindObject(this.auditSection, "name", "notes", "hours", "kind");
+	}
+
+	@Override
+	public void validate() {
+		super.validateObject(this.auditSection);
+	}
+
+	@Override
+	public void execute() {
+		this.repository.save(this.auditSection);
 	}
 
 	@Override
