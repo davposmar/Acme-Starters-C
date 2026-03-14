@@ -55,7 +55,6 @@ public class AuditorAuditReportShowService extends AbstractService<Auditor, Audi
 		Tuple tuple;
 
 		tuple = super.unbindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "auditor.identity.fullName");
-		tuple.put("auditorId", this.auditReport.getAuditor().getId());
 		tuple.put("monthsActive", this.auditReport.getMonthsActive());
 		tuple.put("hours", this.auditReport.getHours());
 	}

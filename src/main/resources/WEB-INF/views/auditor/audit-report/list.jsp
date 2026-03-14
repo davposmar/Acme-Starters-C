@@ -11,3 +11,5 @@
 	<acme:list-column code="auditor.audit-report.list.label.auditor.identity.fullName" path="auditor.identity.fullName" width="20%"/>
 	<acme:list-hidden path="description"/>
 </acme:list>
+
+<acme:button code="auditor.audit-report.list.button.create" action="/auditor/audit-report/create"/>

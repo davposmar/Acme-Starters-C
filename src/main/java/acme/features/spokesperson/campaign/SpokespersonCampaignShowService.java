@@ -55,7 +55,6 @@ public class SpokespersonCampaignShowService extends AbstractService<Spokesperso
 		Tuple tuple;
 
 		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "spokesperson.identity.fullName");
-		tuple.put("spokespersonId", this.campaign.getSpokesperson().getId());
 		tuple.put("monthsActive", this.campaign.getMonthsActive());
 		tuple.put("effort", this.campaign.getEffort());
 	}

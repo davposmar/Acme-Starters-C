@@ -60,6 +60,7 @@ public class SpokespersonMilestoneShowService extends AbstractService<Spokespers
 		choices = SelectChoices.from(MilestoneKind.class, this.milestone.getKind());
 
 		tuple = super.unbindObject(this.milestone, "title", "achievements", "effort", "kind", "campaign.name");
+		tuple.put("draftMode", this.milestone.getCampaign().getDraftMode());
 		tuple.put("kinds", choices);
 	}
 

@@ -11,3 +11,5 @@
 acme.validation.campaign.duplicated-ticker.message = The ticker is duplicated
 acme.validation.campaign.milestone.message = The campaign must have at least one milestone
 acme.validation.campaign.moments.message = Start moment must be before end moment
+acme.validation.campaign.startMoment.message = Start moment must be in the future
+acme.validation.campaign.endMoment.message = End moment must be in the future

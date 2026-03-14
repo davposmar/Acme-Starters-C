@@ -62,6 +62,7 @@ public class SponsorDonationShowService extends AbstractService<Sponsor, Donatio
 
 		tuple = super.unbindObject(this.donation, "name", "notes", "money", "kind");
 		tuple.put("kinds", choices);
+		tuple.put("draftMode", this.donation.getSponsorship().getDraftMode());
 	}
 
 }
