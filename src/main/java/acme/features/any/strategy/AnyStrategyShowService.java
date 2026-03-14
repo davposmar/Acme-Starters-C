@@ -1,17 +1,13 @@
 
 package acme.features.any.strategy;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
 import acme.client.components.principals.Any;
-import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.fundraising.Strategy;
-import acme.realms.Fundraiser;
 
 @Service
 public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
@@ -40,15 +36,11 @@ public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
 
 	@Override
 	public void unbind() {
-		Collection<Fundraiser> fundraisers;
-		SelectChoices choices;
 		Tuple tuple;
 
-		fundraisers = this.repository.findAllFundraisers();
-		choices = SelectChoices.from(fundraisers, "identity.fullName", this.strategy.getFundraiser());
-		tuple = super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "monthsActive", "expectedPercentage");
+		tuple = super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "fundraiser.identity.fullName");
 		tuple.put("fundraiserId", this.strategy.getFundraiser().getId());
-		tuple.put("fundraiser", choices.getSelected().getKey());
-		tuple.put("fundraisers", choices);
+		tuple.put("monthsActive", this.strategy.getMonthsActive());
+		tuple.put("expectedPercentage", this.strategy.getExpectedPercentage());
 	}
 }

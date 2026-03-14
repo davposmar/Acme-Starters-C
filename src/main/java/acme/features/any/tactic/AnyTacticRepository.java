@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
+import acme.entities.fundraising.Strategy;
 import acme.entities.fundraising.Tactic;
 
 @Repository
@@ -17,4 +18,7 @@ public interface AnyTacticRepository extends AbstractRepository {
 
 	@Query("Select t from Tactic t where t.strategy.id = :strategyId")
 	Collection<Tactic> findTacticsByStrategyId(int strategyId);
+
+	@Query("Select s from Strategy s where s.id = :id")
+	Strategy findStrategyById(int id);
 }

@@ -44,8 +44,7 @@ public class AnyTacticShowService extends AbstractService<Any, Tactic> {
 
 		kinds = SelectChoices.from(TacticKind.class, this.tactic.getKind());
 
-		tuple = super.unbindObject(this.tactic, "name", "notes", "expectedPercentage", "kind");
+		tuple = super.unbindObject(this.tactic, "name", "notes", "expectedPercentage", "kind", "strategy.name");
 		tuple.put("kinds", kinds);
-		tuple.put("strategy", this.tactic.getStrategy().getName());
 	}
 }
