@@ -47,6 +47,7 @@ public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
 		fundraisers = this.repository.findAllFundraisers();
 		choices = SelectChoices.from(fundraisers, "identity.fullName", this.strategy.getFundraiser());
 		tuple = super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "monthsActive", "expectedPercentage");
+		tuple.put("fundraiserId", this.strategy.getFundraiser().getId());
 		tuple.put("fundraiser", choices.getSelected().getKey());
 		tuple.put("fundraisers", choices);
 	}
