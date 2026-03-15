@@ -21,3 +21,7 @@
 	<acme:list-column code="fundraiser.strategy.list.label.expectedPercentage" path="expectedPercentage" width="20%"/>
 	<acme:list-hidden path="notes"/>
 </acme:list>
+
+<jstl:if test="${showCreate}">
+	<acme:button code="fundraiser.tactic.list.button.create" action="/fundraiser/tactic/create?strategyId=${strategyId}"/>
+</jstl:if>
