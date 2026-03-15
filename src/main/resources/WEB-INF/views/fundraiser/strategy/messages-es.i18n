@@ -1,0 +1,30 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+fundraiser.strategy.form.title = Detalles de estrategia
+fundraiser.strategy.list.title = Lista de estrategias
+
+fundraiser.strategy.form.label.ticker = Referencia:
+fundraiser.strategy.form.label.fundraiser = Recaudador de fondos:
+fundraiser.strategy.form.label.name = Nombre:
+fundraiser.strategy.form.label.description = Descripción:
+fundraiser.strategy.form.label.startMoment = Fecha de inicio:
+fundraiser.strategy.form.label.endMoment = Fecha de fin:
+fundraiser.strategy.form.label.moreInfo = Más información: (Opcional)
+fundraiser.strategy.form.label.monthsActive = Meses activo (Calculado):
+fundraiser.strategy.form.label.expectedPercentage = Porcentaje esperado (Calculado):
+fundraiser.strategy.form.label.fundraiser = Recaudador de fondos:
+
+fundraiser.strategy.form.button.tactics = Tacticas
+
+fundraiser.strategy.list.label.ticker = Referencia 
+fundraiser.strategy.list.label.name = Nombre
+fundraiser.strategy.list.label.startMoment = Fecha inicio
+fundraiser.strategy.list.label.endMoment = Fecha fin

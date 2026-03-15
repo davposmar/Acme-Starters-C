@@ -44,7 +44,7 @@ public class FundraiserTacticShowService extends AbstractService<Fundraiser, Tac
 
 		choices = SelectChoices.from(TacticKind.class, this.tactic.getKind());
 
-		tuple = super.unbindObject(this.tactic, "name", "notes", "expectedPercentage", "kind");
+		tuple = super.unbindObject(this.tactic, "name", "notes", "expectedPercentage", "kind", "strategy.name");
 		tuple.put("draftMode", this.tactic.getStrategy().getDraftMode());
 		tuple.put("kinds", choices);
 	}
