@@ -33,7 +33,7 @@ public class PartValidator extends AbstractValidator<ValidPart, Part> {
 
 				correctCurrency = itHasAmountAndCurrency && cost.getCurrency().equals("EUR");
 
-				super.state(context, correctCurrency, "*", "acme.validation.job.workload.message");
+				super.state(context, correctCurrency, "*", "acme.validation.part.cost.message");
 			}
 			result = !super.hasErrors(context);
 		}

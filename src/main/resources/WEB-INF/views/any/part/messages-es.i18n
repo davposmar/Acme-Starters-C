@@ -1,4 +1,4 @@
-# validation-es.i18n
+# messages-es.i18n
 #
 # Copyright (C) 2012-2026 Rafael Corchuelo.
 #
@@ -8,8 +8,16 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-acme.validation.campaign.duplicated-ticker.message = Referencia ya usada
-acme.validation.campaign.milestone.message = La campaña tiene que tener al menos un hito
-acme.validation.campaign.moments.message = El momento de inicio debe ser anterior al momento final
-acme.validation.campaign.startMoment.message = El momento de inicio debe ser futuro
-acme.validation.campaign.endMoment.message = El momento final debe ser futuro
+any.part.form.title = Detalles de la parte
+any.part.list.title = Lista de partes
+
+any.part.form.label.invention = Nombre del invento:
+any.part.form.label.name = Nombre:
+any.part.form.label.description = Descripción:
+any.part.form.label.cost = Coste:
+any.part.form.label.kind = Tipo:
+
+
+any.part.list.label.kind = Tipo:
+any.part.list.label.cost = Coste:
+any.part.list.label.name = Nombre:

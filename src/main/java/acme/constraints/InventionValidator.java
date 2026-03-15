@@ -50,13 +50,13 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 				boolean publicMode = !invention.getDraftMode() && this.repository.countPartsOfInvention(invention.getId()) >= MIN_PARTS_OF_INVENTION;
 				correctParts = invention.getDraftMode() || publicMode;
 
-				super.state(context, correctParts, "*", "acme.validation.job.workload.message");
+				super.state(context, correctParts, "*", "acme.validation.invention.part.message");
 			}
 			{
 				boolean correctDates;
 				if (invention.getEndMoment() != null && invention.getStartMoment() != null) {
 					correctDates = MomentHelper.isAfter(invention.getEndMoment(), invention.getStartMoment());
-					super.state(context, correctDates, "deadline", "acme.validation.job.deadline.message");
+					super.state(context, correctDates, "*", "acme.validation.invention.moments.message");
 				}
 
 			}
