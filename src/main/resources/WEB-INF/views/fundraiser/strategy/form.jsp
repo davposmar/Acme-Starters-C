@@ -1,15 +1,3 @@
-<%--
-- form.jsp
--
-- Copyright (C) 2012-2026 Rafael Corchuelo.
--
-- In keeping with the traditional purpose of furthering education and research, it is
-- the policy of the copyright owner to permit non-commercial use and redistribution of
-- this software. It has been tested carefully, but it is not guaranteed for any particular
-- purposes.  The copyright owner does not offer any warranties or representations, nor do
-- they accept any liabilities with respect to them.
---%>
-
 <%@page%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -22,10 +10,24 @@
 	<acme:form-moment code="fundraiser.strategy.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment code="fundraiser.strategy.form.label.endMoment" path="endMoment"/>
 	<acme:form-url code="fundraiser.strategy.form.label.moreInfo" path="moreInfo"/>
-	<acme:form-double code="fundraiser.strategy.form.label.monthsActive" path="monthsActive"/>
-	<acme:form-double code="fundraiser.strategy.form.label.expectedPercentage" path="expectedPercentage"/>
-	<acme:form-textbox code="fundraiser.strategy.form.label.fundraiser" path="fundraiser.identity.fullName"/>
-	
-	<acme:button code="fundraiser.strategy.form.button.tactics" action="/fundraiser/tactics/list?strategyId=${id}"/>
-	<acme:button code="fundraiser.strategy.form.button.fundraiser" action="/fundraiser/fundraiser/show?id=${fundraiserId}"/>
+	<jstl:choose>
+		<jstl:when test="${_command == 'show' && draftMode == false}">
+			<acme:form-double code="fundraiser.strategy.form.label.monthsActive" path="monthsActive"/>
+			<acme:form-double code="fundraiser.strategy.form.label.expectedPercentage" path="expectedPercentage"/>
+			<acme:form-textbox code="fundraiser.strategy.form.label.fundraiser" path="fundraiser.identity.fullName"/>
+			<acme:button code="fundraiser.strategy.form.button.tactics" action="/fundraiser/tactic/list?strategyId=${id}"/>
+		</jstl:when>
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
+			<acme:form-double readonly="true" code="fundraiser.strategy.form.label.monthsActive" path="monthsActive"/>
+			<acme:form-double readonly="true" code="fundraiser.strategy.form.label.expectedPercentage" path="expectedPercentage"/>
+			<acme:form-textbox readonly="true" code="fundraiser.strategy.form.label.fundraiser" path="fundraiser.identity.fullName"/>
+			<acme:button code="fundraiser.strategy.form.button.tactics" action="/fundraiser/tactic/list?strategyId=${id}"/>
+			<acme:submit code="fundraiser.strategy.form.button.update" action="/fundraiser/strategy/update"/>
+			<acme:submit code="fundraiser.strategy.form.button.delete" action="/fundraiser/strategy/delete"/>
+			<acme:submit code="fundraiser.strategy.form.button.publish" action="/fundraiser/strategy/publish"/>
+		</jstl:when>
+		<jstl:when test="${_command == 'create'}">
+			<acme:submit code="fundraiser.strategy.form.button.create" action="/fundraiser/strategy/create"/>
+		</jstl:when>
+	</jstl:choose>
 </acme:form>

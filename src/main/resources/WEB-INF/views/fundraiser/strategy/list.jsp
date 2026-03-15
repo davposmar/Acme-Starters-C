@@ -23,3 +23,5 @@
 	<acme:list-hidden path="description"/>
 	<acme:list-hidden path="fundraiser.identity.fullName"/>
 </acme:list>
+
+<acme:button code="fundraiser.strategy.list.button.create" action="/fundraiser/strategy/create"/>

@@ -23,6 +23,10 @@ fundraiser.strategy.form.label.expectedPercentage = Expected Percentage (Calcula
 fundraiser.strategy.form.label.fundraiser = Fundraiser:
 
 fundraiser.strategy.form.button.tactics = Tactics
+fundraiser.strategy.form.button.create = Create
+fundraiser.strategy.form.button.update = Update
+fundraiser.strategy.form.button.delete = Delete
+fundraiser.strategy.form.button.publish = Publish
 
 fundraiser.strategy.list.label.ticker = Ticker 
 fundraiser.strategy.list.label.name = Name
