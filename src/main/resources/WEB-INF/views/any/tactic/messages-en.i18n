@@ -11,7 +11,7 @@
 any.tactic.form.title = Tactic form
 any.tactic.list.title = Listing of tactics
 
-any.tactic.form.label.strategy = Strategy:
+any.tactic.form.label.strategy = Strategy name:
 any.tactic.form.label.name = Name:
 any.tactic.form.label.notes = Notes:
 any.tactic.form.label.expectedPercentage = Expected percentage:

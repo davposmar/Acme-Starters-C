@@ -18,8 +18,11 @@ any.strategy.form.label.description = Descripción:
 any.strategy.form.label.startMoment = Fecha de inicio:
 any.strategy.form.label.endMoment = Fecha de fin:
 any.strategy.form.label.moreInfo = Más información: (Opcional)
+any.strategy.form.label.monthsActive = Meses activo (Calculado):
+any.strategy.form.label.expectedPercentage = Porcentaje esperado (Calculado):
 
 any.strategy.form.button.tactics = Tacticas
+any.strategy.form.button.fundraiser = Recaudador de fondos
 
 any.strategy.list.label.ticker = Referencia 
 any.strategy.list.label.name = Nombre

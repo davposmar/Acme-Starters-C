@@ -17,12 +17,15 @@
 
 <acme:form>
 	<acme:form-textbox code="any.strategy.form.label.ticker" path="ticker"/>
-	<acme:form-select code="any.strategy.form.label.fundraiser" path="fundraiser" choices="${fundraisers}"/>
 	<acme:form-textbox code="any.strategy.form.label.name" path="name"/>
 	<acme:form-textarea code="any.strategy.form.label.description" path="description"/>
 	<acme:form-moment code="any.strategy.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment code="any.strategy.form.label.endMoment" path="endMoment"/>
 	<acme:form-url code="any.strategy.form.label.moreInfo" path="moreInfo"/>
+	<acme:form-double code="any.strategy.form.label.monthsActive" path="monthsActive"/>
+	<acme:form-double code="any.strategy.form.label.expectedPercentage" path="expectedPercentage"/>
+	<acme:form-textbox code="any.strategy.form.label.fundraiser" path="fundraiser.identity.fullName"/>
 	
 	<acme:button code="any.strategy.form.button.tactics" action="/any/tactics/list?strategyId=${id}"/>
+	<acme:button code="any.strategy.form.button.fundraiser" action="/any/fundraiser/show?id=${fundraiserId}"/>
 </acme:form>
