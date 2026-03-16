@@ -15,6 +15,7 @@ master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.list-audit-reports = Audit Reports
 master.menu.anonymous.list-campaigns = Campaigns
 master.menu.anonymous.list-sponsorships = Sponsorships
+master.menu.anonymous.list-inventions = Inventions
 
 # master.menu.authenticated #######################################################
 
@@ -53,6 +54,11 @@ master.menu.spokesperson.list-my-campaigns = List my campaigns
 master.menu.sponsor = Sponsor
 master.menu.sponsor.list-my-sponsorships = List my sponsorships
 
+# master.menu.inventor ####################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.list-my-inventions = List my inventions
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
@@ -67,3 +73,5 @@ master.menu.user-account.become-spokesperson = Become a spokesperson
 master.menu.user-account.spokesperson-profile = Spokesperson profile
 master.menu.user-account.become-sponsor = Become a sponsor
 master.menu.user-account.sponsor-profile = Sponsor profile
+master.menu.user-account.become-inventor = Become an inventor
+master.menu.user-account.inventor-profile = Inventor profile
