@@ -11,3 +11,5 @@
 acme.validation.sponsorship.duplicated-ticker.message = Referencia ya usada.
 acme.validation.sponsorship.minimun-donations.message = Debe tener al menos un Donation antes de poder publicarse.
 acme.validation.sponsorship.moments.message = El momento de inicio debe ser anterior al momento final.
+acme.validation.sponsorship.moments.start.future.message = El momento de inicio debe ser futuro.
+acme.validation.sponsorship.moments.end.future.message = El momento de fin debe ser futuro.

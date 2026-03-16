@@ -11,3 +11,5 @@
 	<acme:list-hidden path="description"/>
 	<acme:list-hidden path="spokesperson.identity.fullName"/>
 </acme:list>
+
+<acme:button code="spokesperson.campaign.list.button.create" action="/spokesperson/campaign/create"/>

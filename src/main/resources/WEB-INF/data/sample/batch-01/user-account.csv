@@ -35,3 +35,6 @@ user-account-spokesperson-20,true,"UserIdentity{name: 'Groot', surname: 'Tree', 
 user-account-spokesperson-21,true,"UserIdentity{name: 'Mantis', surname: 'Celestial', email: 'spokesperson21@acme.com'}",spokesperson21,spokesperson21
 user-account-spokesperson-22,true,"UserIdentity{name: 'Nebula', surname: 'Thanos', email: 'spokesperson22@acme.com'}",spokesperson22,spokesperson22
 user-account-spokesperson-23,true,"UserIdentity{name: 'Loki', surname: 'Laufeyson', email: 'spokesperson23@acme.com'}",spokesperson23,spokesperson23
+user-account-inventor-01,true,"UserIdentity{name: 'inventor1', surname: 'Acme', email: 'inventor1@acme.com'}",inventor1,inventor1
+user-account-inventor-02,true,"UserIdentity{name: 'inventor2', surname: 'Acme', email: 'inventor2@acme.com'}",inventor2,inventor2
+user-account-inventor-03,true,"UserIdentity{name: 'inventor3', surname: 'Acme', email: 'inventor3@acme.com'}",inventor3,inventor3

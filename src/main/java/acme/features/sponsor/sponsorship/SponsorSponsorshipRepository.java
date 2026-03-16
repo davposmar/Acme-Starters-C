@@ -18,6 +18,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
+import acme.entities.sponsorships.Donation;
 import acme.entities.sponsorships.Sponsorship;
 
 @Repository
@@ -28,5 +29,11 @@ public interface SponsorSponsorshipRepository extends AbstractRepository {
 
 	@Query("select ss from Sponsorship ss where ss.sponsor.id = :sponsorId")
 	Collection<Sponsorship> findSponsorshipsBySponsorId(int sponsorId);
+
+	@Query("select d from Donation d where d.sponsorship.id = :sponsorshipId")
+	Collection<Donation> findDonationsBySponsorshipId(int sponsorshipId);
+
+	@Query("Select COUNT(d) from Donation d where d.sponsorship.id = :sponsorshipId")
+	Integer findCountDonationsBySponsorshipId(int sponsorshipId);
 
 }

@@ -19,6 +19,7 @@ import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
 import acme.entities.campaigns.Campaign;
+import acme.entities.campaigns.Milestone;
 
 @Repository
 public interface SpokespersonCampaignRepository extends AbstractRepository {
@@ -28,5 +29,11 @@ public interface SpokespersonCampaignRepository extends AbstractRepository {
 
 	@Query("select c from Campaign c where c.id = :campaignId")
 	Campaign findCampaignById(int campaignId);
+
+	@Query("select m from Milestone m where m.campaign.id = :campaignId")
+	Collection<Milestone> findMilestonesByCampaignId(int campaignId);
+
+	@Query("select count(m) from Milestone m where m.campaign.id = :campaignId")
+	Long countMilestonesByCampaignId(int campaignId);
 
 }

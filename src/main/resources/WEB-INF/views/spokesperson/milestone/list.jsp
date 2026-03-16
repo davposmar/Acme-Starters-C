@@ -9,3 +9,7 @@
 	<acme:list-column code="spokesperson.milestone.list.label.effort" path="effort" width="20%"/>
 	<acme:list-hidden path="achievements"/>
 </acme:list>
+
+<jstl:if test="${showCreate}">
+	<acme:button code="spokesperson.milestone.list.button.create" action="/spokesperson/milestone/create?campaignId=${campaignId}"/>
+</jstl:if>
