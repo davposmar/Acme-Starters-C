@@ -48,7 +48,8 @@ public class SpokespersonCampaignDeleteService extends AbstractService<Spokesper
 	public void authorise() {
 		boolean status;
 
-		status = this.campaign != null && Boolean.TRUE.equals(this.campaign.getDraftMode()) && this.campaign.getSpokesperson().isPrincipal();
+		status = this.campaign != null && this.campaign.getDraftMode() && this.campaign.getSpokesperson().isPrincipal();
+
 		super.setAuthorised(status);
 	}
 
