@@ -16,6 +16,7 @@ master.menu.anonymous.list-audit-reports = Audit Reports
 master.menu.anonymous.list-campaigns = Campaigns
 master.menu.anonymous.list-sponsorships = Sponsorships
 master.menu.anonymous.list-inventions = Inventions
+master.menu.anonymous.list-strategies = Strategies
 
 # master.menu.authenticated #######################################################
 
@@ -59,6 +60,11 @@ master.menu.sponsor.list-my-sponsorships = List my sponsorships
 master.menu.inventor = Inventor
 master.menu.inventor.list-my-inventions = List my inventions
 
+# master.menu.fundraiser ##########################################################
+
+master.menu.fundraiser = Fundraiser
+master.menu.fundraiser.list-my-strategies = List my strategies
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
@@ -75,3 +81,5 @@ master.menu.user-account.become-sponsor = Become a sponsor
 master.menu.user-account.sponsor-profile = Sponsor profile
 master.menu.user-account.become-inventor = Become an inventor
 master.menu.user-account.inventor-profile = Inventor profile
+master.menu.user-account.become-fundraiser = Become a fundraiser
+master.menu.user-account.fundraiser-profile = Fundraiser profile

@@ -14,3 +14,7 @@ user-account-spokesperson-00,true,"UserIdentity{name: 'Tony', surname: 'Stark', 
 user-account-spokesperson-01,true,"UserIdentity{name: 'Peter', surname: 'Parker', email: 'spokesperson01@acme.com'}","spokesperson1",""
 user-account-spokesperson-02,true,"UserIdentity{name: 'Natasha', surname: 'Romanoff', email: 'spokesperson02@acme.com'}","",spokesperson2
 user-account-spokesperson-03,true,"UserIdentity{name: 'Steve', surname: 'Rogers', email: 'spokesperson03@acme.com'}",spokesperson3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem"
+user-account-fundraiser-00,true,"UserIdentity{name: 'Stephen', surname: 'Curry', email: 'fundraiser00@acme.com'}",fundraiser0,fundraiser0
+user-account-fundraiser-01,true,"UserIdentity{name: 'Lebron', surname: 'James', email: 'fundraiser01@acme.com'}","fundraiser1",""
+user-account-fundraiser-02,true,"UserIdentity{name: 'James', surname: 'Harden', email: 'fundraiser02@acme.com'}","",fundraiser2
+user-account-fundraiser-03,true,"UserIdentity{name: 'Kevin', surname: 'Durant', email: 'fundraiser03@acme.com'}",fundraiser3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem"

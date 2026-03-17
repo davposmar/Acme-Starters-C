@@ -1,4 +1,4 @@
-# validation-es.i18n
+# validation-en.i18n
 #
 # Copyright (C) 2012-2026 Rafael Corchuelo.
 #
@@ -8,7 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-acme.validation.header.message  	= Debe tener entre 1 y 75 caracteres
-acme.validation.text.message   		= Debe tener entre 1 y 255 caracteres
-
-acme.validation.ticker.message			   = La referencia debe tener 2 mayúsculas, 2 números, un guion y entre 5 y 10 caracteres solo incluyendo mayúsculas, minúsculas, números y barras bajas 
+acme.validation.strategy.duplicated-ticker.message = Referencia ya usada
+acme.validation.strategy.tactic.message = La estrategia debe tener al menos una táctica
+acme.validation.strategy.moments.message = El momento de inicio debe ser anterior al momento final
+acme.validation.strategy.startMoment.message = El momento inicial debe ser futuro
+acme.validation.strategy.endMoment.message = El momento final debe ser futuro
