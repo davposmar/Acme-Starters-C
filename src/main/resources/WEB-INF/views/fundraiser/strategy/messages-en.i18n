@@ -32,3 +32,4 @@ fundraiser.strategy.list.label.ticker = Ticker
 fundraiser.strategy.list.label.name = Name
 fundraiser.strategy.list.label.startMoment = Start Moment
 fundraiser.strategy.list.label.endMoment = End Moment
+fundraiser.strategy.list.button.create = Create

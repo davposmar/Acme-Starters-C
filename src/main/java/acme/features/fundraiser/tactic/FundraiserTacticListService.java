@@ -34,7 +34,7 @@ public class FundraiserTacticListService extends AbstractService<Fundraiser, Tac
 	public void authorise() {
 		boolean status;
 
-		status = this.strategy != null && (!this.strategy.getFundraiser().isPrincipal() || !this.strategy.getDraftMode());
+		status = this.strategy != null && (this.strategy.getFundraiser().isPrincipal() || !this.strategy.getDraftMode());
 
 		super.setAuthorised(status);
 	}

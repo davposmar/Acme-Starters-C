@@ -26,6 +26,6 @@
 	<acme:form-double code="any.strategy.form.label.expectedPercentage" path="expectedPercentage"/>
 	<acme:form-textbox code="any.strategy.form.label.fundraiser" path="fundraiser.identity.fullName"/>
 	
-	<acme:button code="any.strategy.form.button.tactics" action="/any/tactics/list?strategyId=${id}"/>
+	<acme:button code="any.strategy.form.button.tactics" action="/any/tactic/list?strategyId=${id}"/>
 	<acme:button code="any.strategy.form.button.fundraiser" action="/any/fundraiser/show?id=${fundraiserId}"/>
 </acme:form>

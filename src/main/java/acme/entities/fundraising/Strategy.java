@@ -48,7 +48,7 @@ public class Strategy extends AbstractEntity {
 
 	@Mandatory
 	@ValidHeader
-	@Column(unique = true)
+	@Column
 	private String				name;
 
 	@Mandatory

@@ -8,8 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-acme.validation.strategy.duplicated-ticker.message = The ticker is duplicated
-acme.validation.strategy.tactic.message = The strategy must have at least one tactic
-acme.validation.strategy.moments.message = Start moment must be before end moment
-acme.validation.strategy.startMoment.message = Start moment must be in the future
-acme.validation.strategy.endMoment.message = End moment must be in the future
+acme.validation.header.message = Must have from 1 to 75 characters
+acme.validation.text.message = Must have from 1 to 255 characters
+
+acme.validation.ticker.message = The ticker must have letters, digits, underscores, and hyphens only

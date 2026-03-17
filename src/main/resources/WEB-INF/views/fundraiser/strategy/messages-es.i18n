@@ -32,3 +32,4 @@ fundraiser.strategy.list.label.ticker = Referencia
 fundraiser.strategy.list.label.name = Nombre
 fundraiser.strategy.list.label.startMoment = Fecha inicio
 fundraiser.strategy.list.label.endMoment = Fecha fin
+fundraiser.strategy.list.button.create = Crear

@@ -12,7 +12,11 @@
 
 master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = Favourite link
-master.menu.anonymous.list-strategies = Strategies
+master.menu.anonymous.list-strategies = List of Strategies
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Authenticated
 
 # master.menu.administrator ###################################################
 

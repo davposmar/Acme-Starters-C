@@ -32,7 +32,7 @@ public class AnyTacticShowService extends AbstractService<Any, Tactic> {
 	public void authorise() {
 		boolean status;
 
-		status = this.tactic != null;
+		status = this.tactic != null && !this.tactic.getStrategy().getDraftMode();
 
 		super.setAuthorised(status);
 	}
