@@ -12,7 +12,11 @@
 
 master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = Favourite link
-master.menu.anonymous.list-strategies = List of Strategies
+master.menu.anonymous.list-audit-reports = Audit Reports
+master.menu.anonymous.list-campaigns = Campaigns
+master.menu.anonymous.list-sponsorships = Sponsorships
+master.menu.anonymous.list-inventions = Inventions
+master.menu.anonymous.list-strategies = Strategies
 
 # master.menu.authenticated #######################################################
 
@@ -36,6 +40,26 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list-my-audit-reports= List my audit reports
+
+# master.menu.spokesperson ####################################################
+
+master.menu.spokesperson = Spokesperson
+master.menu.spokesperson.list-my-campaigns = List my campaigns
+
+# master.menu.sponsor ####################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.list-my-sponsorships = List my sponsorships
+
+# master.menu.inventor ####################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.list-my-inventions = List my inventions
+
 # master.menu.fundraiser ##########################################################
 
 master.menu.fundraiser = Fundraiser
@@ -49,5 +73,13 @@ master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.provider-profile = Provider profile
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.consumer-profile = Consumer profile
+master.menu.user-account.become-auditor = Become a auditor
+master.menu.user-account.auditor-profile = Auditor profile
+master.menu.user-account.become-spokesperson = Become a spokesperson
+master.menu.user-account.spokesperson-profile = Spokesperson profile
+master.menu.user-account.become-sponsor = Become a sponsor
+master.menu.user-account.sponsor-profile = Sponsor profile
+master.menu.user-account.become-inventor = Become an inventor
+master.menu.user-account.inventor-profile = Inventor profile
 master.menu.user-account.become-fundraiser = Become a fundraiser
 master.menu.user-account.fundraiser-profile = Fundraiser profile

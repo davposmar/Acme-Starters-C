@@ -1,0 +1,32 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+any.sponsorship.form.title = Detalles patrocinio
+any.sponsorship.list.title = Listado de patrocinios
+
+any.sponsorship.form.label.ticker = Referencia:
+any.sponsorship.form.label.name = Nombre:
+any.sponsorship.form.label.description = Descripción:
+any.sponsorship.form.label.startMoment = Fecha de comienzo:
+any.sponsorship.form.label.endMoment = Fecha de fin:
+any.sponsorship.form.label.moreInfo = Más información: (Opcional)
+any.sponsorship.form.label.sponsor.identity.fullName = Espónsor:
+any.sponsorship.form.label.monthsActive = Meses Activo: (Calculado)
+any.sponsorship.form.label.totalMoney = Dinero total: (Calculado)
+
+any.sponsorship.form.button.donations = Donaciones
+any.sponsorship.form.button.sponsor = Espónsor
+
+any.sponsorship.list.label.ticker = Referencia 
+any.sponsorship.list.label.name = Nombre
+any.sponsorship.list.label.startMoment = Fecha de comienzo
+any.sponsorship.list.label.endMoment = Fecha de fin
+any.sponsorship.list.label.sponsor.identity.fullName = Espónsor
+
