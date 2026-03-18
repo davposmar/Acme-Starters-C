@@ -6,7 +6,6 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -74,8 +73,9 @@ public class Strategy extends AbstractEntity {
 	@Column
 	private Boolean				draftMode;
 
-	@ManyToOne
-	@JoinColumn(name = "fundraiser_id")
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
 	private Fundraiser			fundraiser;
 
 	// Derived attributes --------------------------------------------
