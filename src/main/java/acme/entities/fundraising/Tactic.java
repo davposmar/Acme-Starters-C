@@ -3,9 +3,6 @@ package acme.entities.fundraising;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 
@@ -45,11 +42,11 @@ public class Tactic extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@Column
-	@Enumerated(EnumType.STRING)
 	private TacticKind			kind;
 
-	@ManyToOne
-	@JoinColumn(name = "strategy_id", nullable = false)
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
 	private Strategy			strategy;
 
 }
