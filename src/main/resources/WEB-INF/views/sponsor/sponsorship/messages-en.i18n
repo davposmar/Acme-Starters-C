@@ -22,7 +22,7 @@ sponsor.sponsorship.list.label.ticker = Ticker
 sponsor.sponsorship.list.label.name = Name
 sponsor.sponsorship.list.label.startMoment = Start Moment
 sponsor.sponsorship.list.label.endMoment = End Moment
-sponsor.sponsorship.list.label.sponsor.identity.fullName = Sponsor
+sponsor.sponsorship.list.label.draftMode = DraftMode
 
 sponsor.sponsorship.list.button.create = Create
 
