@@ -8,11 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.fundraiser.form.title = Datos del recaudador de fondos
+authenticated.fundraiser.form.title = Datos del recaudador de fondos
 
-any.fundraiser.form.label.bank = Banco:
-any.fundraiser.form.label.statement = Declaración:
-any.fundraiser.form.label.agent = Agente:
+authenticated.fundraiser.form.label.bank = Banco:
+authenticated.fundraiser.form.label.statement = Declaración:
+authenticated.fundraiser.form.label.agent = Agente:
 
 authenticated.fundraiser.form.button.create = Registrar
 authenticated.fundraiser.form.button.update = Actualizar
