@@ -8,7 +8,7 @@
 	<acme:list-column code="sponsor.sponsorship.list.label.name" path="name" width="20%"/>
 	<acme:list-column code="sponsor.sponsorship.list.label.startMoment" path="startMoment" width="20%"/>
 	<acme:list-column code="sponsor.sponsorship.list.label.endMoment" path="endMoment" width="20%"/>
-	<acme:list-column code="sponsor.sponsorship.list.label.sponsor.identity.fullName" path="sponsor.identity.fullName" width="20%"/>
+	<acme:list-column code="sponsor.sponsorship.list.label.draftMode" path="draftMode" width="20%"/>
 	<acme:list-hidden path="description"/>
 </acme:list>
 
