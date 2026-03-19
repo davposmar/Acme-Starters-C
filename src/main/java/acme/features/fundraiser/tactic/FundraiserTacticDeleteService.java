@@ -59,7 +59,7 @@ public class FundraiserTacticDeleteService extends AbstractService<Fundraiser, T
 
 	@Override
 	public void validate() {
-		super.validateObject(this.tactic);
+		;
 	}
 
 	@Override
