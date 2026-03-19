@@ -60,7 +60,7 @@ public class AuditorAuditSectionDeleteService extends AbstractService<Auditor, A
 
 	@Override
 	public void validate() {
-		super.validateObject(this.auditSection);
+		;
 	}
 
 	@Override
