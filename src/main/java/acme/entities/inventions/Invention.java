@@ -19,6 +19,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
+import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidUrl;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidInvention;
@@ -83,6 +84,8 @@ public class Invention extends AbstractEntity {
 	private InventionRepository	repository;
 
 
+	@Mandatory
+	@Valid
 	@Transient
 	public Double getMonthsActive() {
 		if (this.startMoment == null || this.endMoment == null)
@@ -92,7 +95,8 @@ public class Invention extends AbstractEntity {
 		double month = diff / (1000.0 * 60 * 60 * 24 * 30);
 		return Math.round(month * 10.0) / 10.0;
 	}
-
+	@Mandatory
+	@ValidMoney(min = 0.0, max = 999999999999999999999999999.0)
 	@Transient
 	public Money getCost() {
 		Money cost = new Money();
