@@ -12,6 +12,15 @@
 
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
+master.menu.anonymous.list-audit-reports = Informes de Auditoría
+master.menu.anonymous.list-campaigns = Campañas
+master.menu.anonymous.list-sponsorships = Patrocinios
+master.menu.anonymous.list-inventions = Inventos
+master.menu.anonymous.list-strategies = Estrategias
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Autenticado
 
 # master.menu.administrator ###################################################
 
@@ -31,6 +40,31 @@ master.menu.provider.favourite-link = Enlace favorito
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
 
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list-my-audit-reports= Lista mis informes de autoría
+
+# master.menu.spokesperson ####################################################
+
+master.menu.spokesperson = Portavoz
+master.menu.spokesperson.list-my-campaigns = Lista mis campañas
+
+# master.menu.sponsor ####################################################
+
+master.menu.sponsor = Espónsor
+master.menu.sponsor.list-my-sponsorships = Lista mis patrocinios
+
+# master.menu.inventor ####################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.list-my-inventions = Lista mis inventos
+
+# master.menu.fundraiser ##########################################################
+
+master.menu.fundraiser = Recaudador de Fondos
+master.menu.fundraiser.list-my-strategies = Listar mis estrategias
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
@@ -39,3 +73,13 @@ master.menu.user-account.become-provider = Hacerse proveedor
 master.menu.user-account.provider-profile = Perfil de proveedor
 master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.user-account.consumer-profile = Perfil de consumidor
+master.menu.user-account.become-auditor = Convertirse en auditor
+master.menu.user-account.auditor-profile = Ver perfil de auditor
+master.menu.user-account.become-spokesperson = Convertirse en portavoz
+master.menu.user-account.spokesperson-profile = Ver perfil de portavoz
+master.menu.user-account.become-sponsor = Convertirse en espónsor
+master.menu.user-account.sponsor-profile = Ver perfil de espónsor
+master.menu.user-account.become-inventor = Hazte un inventor
+master.menu.user-account.inventor-profile =Perfil de Inventor
+master.menu.user-account.become-fundraiser = Hazte recaudador de fondos
+master.menu.user-account.fundraiser-profile = Ver perfil de recaudador de fondos

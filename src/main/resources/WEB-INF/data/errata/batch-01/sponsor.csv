@@ -1,0 +1,11 @@
+key,address,im,gold,key:userAccount
+# base entity
+sponsor-00,"C/Estrella Canopus","Lorem ipsum dolor sit amet, consectetu",TRUE,user-account-sponsor-00
+# address
+sponsor-01,"","لوريم إيبسوم",TRUE,user-account-sponsor-00
+sponsor-02,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i","لوريم إيبسوم",TRUE,user-account-sponsor-00
+# im
+sponsor-03,"C/Estrella Betelgeuse","",TRUE,user-account-sponsor-00
+sponsor-04,"C/Estrella Betelgeuse","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",TRUE,user-account-sponsor-00
+# gold
+sponsor-05,"C/Estrella Adara","洛伦·伊普森","",user-account-sponsor-00

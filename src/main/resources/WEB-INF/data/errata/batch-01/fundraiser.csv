@@ -1,0 +1,14 @@
+key,key:userAccount,bank,statement,agent
+# base entity,"","","",""
+fundraiser-00,user-account-fundraiser-00,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+# bank - standard variations,"","","",""
+fundraiser-01,user-account-fundraiser-00,"","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+fundraiser-02,user-account-fundraiser-00,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE
+# bank - no singular values,"","","",""
+# statement - standard variations,"","","",""
+fundraiser-03,user-account-fundraiser-00,"Lorem ipsum dolor sit amet, consectetu","",TRUE
+fundraiser-04,user-account-fundraiser-00,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",TRUE
+# statement - no singular values,"","","",""
+# agent - standard variations,"","","",""
+fundraiser-05,user-account-fundraiser-00,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",""
+# agent - no singular values,"","","",""

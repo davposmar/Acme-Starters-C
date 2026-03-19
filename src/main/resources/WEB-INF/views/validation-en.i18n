@@ -1,0 +1,14 @@
+# validation-en.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+acme.validation.header.message  	= Must have from 1 to 75 characters
+acme.validation.text.message   		= Must have from 1 to 255 characters
+
+acme.validation.ticker.message			  = The reference must contain 2 uppercase letters, 2 digits, a hyphen, and be between 5 and 10 characters long, including only letters, digits, and underscores

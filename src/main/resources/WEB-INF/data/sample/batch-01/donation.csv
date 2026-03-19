@@ -1,0 +1,45 @@
+﻿key,name,notes,money,kind,key:sponsorship
+# base entity,"","","",""
+donation-00,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,ALTRUIST,sponsorship-01
+# name - standard variations,"","","","","",""
+donation-01,L,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,ALTRUIST,sponsorship-01
+donation-02,Lo,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,ALTRUIST,sponsorship-01
+donation-03,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,ALTRUIST,sponsorship-01
+donation-04,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,ALTRUIST,sponsorship-01
+donation-05,โลเร็ม อิปซัม,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,ALTRUIST,sponsorship-01
+donation-06,لوريم إيبسوم,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,ALTRUIST,sponsorship-01
+donation-07,洛伦·伊普森,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,ALTRUIST,sponsorship-01
+donation-08,<marquee>Hacked</marquee>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,ALTRUIST,sponsorship-01
+donation-09,<script>alert(‘Hacked!’);</script>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,ALTRUIST,sponsorship-01
+donation-10,' or 'A' = 'A,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,ALTRUIST,sponsorship-01
+# name - singular values,"","",""
+donation-11,"❤","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,ALTRUIST,sponsorship-01
+# notes - standard variations,""
+donation-12,"Lorem ipsum dolor sit amet, consectetur adipiscing",L,EUR 500000.00,ALTRUIST,sponsorship-01
+donation-13,"Lorem ipsum dolor sit amet, consectetur adipiscing",Lo,EUR 500000.00,ALTRUIST,sponsorship-01
+donation-14,"Lorem ipsum dolor sit amet, consectetur adipiscing","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",EUR 500000.00,ALTRUIST,sponsorship-01
+donation-15,"Lorem ipsum dolor sit amet, consectetur adipiscing","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",EUR 500000.00,ALTRUIST,sponsorship-01
+donation-16,"Lorem ipsum dolor sit amet, consectetur adipiscing",โลเร็ม อิปซัม,EUR 500000.00,ALTRUIST,sponsorship-01
+donation-17,"Lorem ipsum dolor sit amet, consectetur adipiscing",لوريم إيبسوم,EUR 500000.00,ALTRUIST,sponsorship-01
+donation-18,"Lorem ipsum dolor sit amet, consectetur adipiscing",洛伦·伊普森,EUR 500000.00,ALTRUIST,sponsorship-01
+donation-19,"Lorem ipsum dolor sit amet, consectetur adipiscing",<marquee>Hacked</marquee>,EUR 500000.00,ALTRUIST,sponsorship-01
+donation-20,"Lorem ipsum dolor sit amet, consectetur adipiscing",<script>alert(‘Hacked!’);</script>,EUR 500000.00,ALTRUIST,sponsorship-01
+donation-21,"Lorem ipsum dolor sit amet, consectetur adipiscing",' or 'A' = 'A,EUR 500000.00,ALTRUIST,sponsorship-01
+# notes - singular values
+donation-22,"Lorem ipsum dolor sit amet, consectetur adipiscing",❤️,EUR 500000.00,ALTRUIST,sponsorship-01
+# money - standard variations,""
+donation-23,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 0.00,ALTRUIST,sponsorship-01
+donation-24,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 0.01,ALTRUIST,sponsorship-01
+donation-25,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 999999.99,ALTRUIST,sponsorship-01
+donation-26,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 1000000.00,ALTRUIST,sponsorship-01
+# money - singular values,"",""
+donation-27,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500.00,ALTRUIST,sponsorship-01
+donation-28,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 100.00,ALTRUIST,sponsorship-01
+donation-29,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 10000.00,ALTRUIST,sponsorship-01
+# kind - standard variations,"",""
+donation-30,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,REWARDED,sponsorship-01
+donation-31,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,CELEBRATED,sponsorship-01
+# kind - no singular values
+# sponsorship - standard variations
+donation-32,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,ALTRUIST,sponsorship-64
+# sponsorship - no singular values

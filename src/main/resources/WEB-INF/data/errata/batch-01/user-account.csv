@@ -1,0 +1,20 @@
+key,enabled,identity,password,username
+user-account-inventor-01,true,"UserIdentity{name: 'inventor1', surname: 'Acme', email: 'inventor1@acme.com'}","",inventor1
+user-account-inventor-02,true,"UserIdentity{name: 'inventor2', surname: 'Acme', email: 'inventor2@acme.com'}","",inventor2
+user-account-inventor-03,true,"UserIdentity{name: 'inventor3', surname: 'Acme', email: 'inventor3@acme.com'}","",inventor3
+user-account-sponsor-00,true,"UserIdentity{name: 'Lucius', surname: 'Malfoy', email: 'lucius@acme.com'}",sponsor0,sponsor0
+user-account-sponsor-01,true,"UserIdentity{name: 'Draco', surname: 'Malfoy', email: 'draco@acme.com'}",sponsor1,""
+user-account-sponsor-02,true,"UserIdentity{name: 'Harry', surname: '波特', email: 'harry@acme.com'}","",sponsor2
+user-account-sponsor-03,true,"UserIdentity{name: 'Ron', surname: 'ويزلي', email: 'ron@acme.com'}",sponsor3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem"
+user-account-auditor-00,true,"UserIdentity{name: 'Eren', surname: 'auditor', email: 'eren@acme.com'}",auditor0,auditor0
+user-account-auditor-01,true,"UserIdentity{name: 'Mikasa', surname: 'аудитор', email: 'mikasa@acme.com'}","auditor1",""
+user-account-auditor-02,true,"UserIdentity{name: 'Levy', surname: '監査人', email: 'levy@acme.com'}","",auditor2
+user-account-auditor-03,true,"UserIdentity{name: 'Eren', surname: 'auditor', email: 'eren@acme.com'}",auditor3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem"
+user-account-spokesperson-00,true,"UserIdentity{name: 'Tony', surname: 'Stark', email: 'spokesperson00@acme.com'}",spokesperson0,spokesperson0
+user-account-spokesperson-01,true,"UserIdentity{name: 'Peter', surname: 'Parker', email: 'spokesperson01@acme.com'}","spokesperson1",""
+user-account-spokesperson-02,true,"UserIdentity{name: 'Natasha', surname: 'Romanoff', email: 'spokesperson02@acme.com'}","",spokesperson2
+user-account-spokesperson-03,true,"UserIdentity{name: 'Steve', surname: 'Rogers', email: 'spokesperson03@acme.com'}",spokesperson3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem"
+user-account-fundraiser-00,true,"UserIdentity{name: 'Stephen', surname: 'Curry', email: 'fundraiser00@acme.com'}",fundraiser0,fundraiser0
+user-account-fundraiser-01,true,"UserIdentity{name: 'Lebron', surname: 'James', email: 'fundraiser01@acme.com'}","fundraiser1",""
+user-account-fundraiser-02,true,"UserIdentity{name: 'James', surname: 'Harden', email: 'fundraiser02@acme.com'}","",fundraiser2
+user-account-fundraiser-03,true,"UserIdentity{name: 'Kevin', surname: 'Durant', email: 'fundraiser03@acme.com'}",fundraiser3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem"

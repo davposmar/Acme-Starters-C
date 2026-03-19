@@ -1,0 +1,31 @@
+key,bank,statement,agent,key:userAccount
+# base entity,"","","",""
+fundraiser-00,"Lorem ipsum dolor sit amet, consectetur","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE,user-account-fundraiser-00
+# bank - standard variations
+fundraiser-01,L,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE,user-account-fundraiser-01
+fundraiser-02,Lo,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE,user-account-fundraiser-02
+fundraiser-03,"Lorem ipsum dolor sit amet, consectetur","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE,user-account-fundraiser-03
+fundraiser-04,"Lorem ipsum dolor sit amet, consectetur","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE,user-account-fundraiser-04
+fundraiser-05,โลเร็ม อิปซัม,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE,user-account-fundraiser-05
+fundraiser-06,لوريم إيبسوم,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE,user-account-fundraiser-06
+fundraiser-07,洛伦·伊普森,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE,user-account-fundraiser-07
+fundraiser-08,<marquee>Hacked</marquee>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE,user-account-fundraiser-08
+fundraiser-09,<script>alert(‘Hacked!’);</script>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE,user-account-fundraiser-09
+fundraiser-10,' or 'A' = 'A,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE,user-account-fundraiser-10
+# bank - singular variations
+fundraiser-11,☺,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE,user-account-fundraiser-11
+# statement - standard variatons
+fundraiser-12,"Lorem ipsum dolor sit amet, consectetur",L,TRUE,user-account-fundraiser-12
+fundraiser-13,"Lorem ipsum dolor sit amet, consectetur",Lo,TRUE,user-account-fundraiser-13
+fundraiser-14,"Lorem ipsum dolor sit amet, consectetur","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",TRUE,user-account-fundraiser-14
+fundraiser-15,"Lorem ipsum dolor sit amet, consectetur","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",TRUE,user-account-fundraiser-15
+fundraiser-16,"Lorem ipsum dolor sit amet, consectetur",โลเร็ม อิปซัม,TRUE,user-account-fundraiser-16
+fundraiser-17,"Lorem ipsum dolor sit amet, consectetur",لوريم إيبسوم,TRUE,user-account-fundraiser-17
+fundraiser-18,"Lorem ipsum dolor sit amet, consectetur",洛伦·伊普森,TRUE,user-account-fundraiser-18
+fundraiser-19,"Lorem ipsum dolor sit amet, consectetur",<marquee>Hacked</marquee>,TRUE,user-account-fundraiser-19
+fundraiser-20,"Lorem ipsum dolor sit amet, consectetur",<script>alert(‘Hacked!’);</script>,TRUE,user-account-fundraiser-20
+fundraiser-21,"Lorem ipsum dolor sit amet, consectetur",' or 'A' = 'A,TRUE,user-account-fundraiser-21
+# statement - singular variations
+fundraiser-22,☺,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",TRUE,user-account-fundraiser-22
+# agent - standard variations
+fundraiser-23,"Lorem ipsum dolor sit amet, consectetur","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",FALSE,user-account-fundraiser-23

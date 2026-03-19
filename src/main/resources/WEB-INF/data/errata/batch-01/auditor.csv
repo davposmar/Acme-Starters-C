@@ -1,0 +1,11 @@
+key,key:userAccount,firm,highlights,solicitor
+# base entity
+auditor-00,user-account-auditor-00,AuditorFirms,"Lorem ipsum dolor sit amet, consectetu",TRUE
+# firm
+auditor-01,user-account-auditor-00,"","Lorem ipsum dolor sit amet, consectetu",TRUE
+auditor-02,user-account-auditor-00,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem","Lorem ipsum dolor sit amet, consectetu",TRUE
+# highlights
+auditor-03,user-account-auditor-00,Норма Редакция,"",TRUE
+auditor-04,user-account-auditor-00,週刊少年ジャンプ,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem",FALSE
+#solicitor
+auditor-05,user-account-auditor-00,週刊少年ジャンプ,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem",""
