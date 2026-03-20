@@ -60,7 +60,7 @@ public class SpokespersonMilestoneDeleteService extends AbstractService<Spokespe
 
 	@Override
 	public void validate() {
-		super.validateObject(this.milestone);
+		;
 	}
 
 	@Override
